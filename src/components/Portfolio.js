@@ -1,42 +1,41 @@
 import React, {useState, useEffect} from 'react';
+import PhotoAlbum from './PhotoAlbum.js'
+import {getAlbums} from './api.js'
 
-const apiKey = '0fdf2fb844ae7522e3cb66f51d688f90'
-const userId = '190195340@N08'
-const sizeMedium = `url_m`
-const apiAlbums = `https://api.flickr.com/services/rest/?method=flickr.photosets.getList&api_key=${apiKey}&user_id=${userId}&format=json&nojsoncallback=?`
-// const apiAlbumPhotos = 
 
 const Portfolio = () => {
   const [albums, setAlbums] = useState([])
 
   useEffect(() => {
-    fetch(apiAlbums)
-    .then(response=>{
-      if (response.ok) {
-        return response.json()
-      } else {
-        throw new Error('Błąd sieci')
-      }
-    })
+    getAlbums()
     .then(data=> {
-      // console.log('all data->', data);
-      // console.log('photoset',data.photosets.photoset);
       // * GET all album IDs
+      const albumsTemp = [];
       data.photosets.photoset.forEach(elem=>
-        // console.log(elem.id)
-        setAlbums(prev=>[...prev,elem.id])
-        )
+        { 
+          albumsTemp.push({
+            id: elem.id,
+            title: elem.title._content,
+          });
+            
+        }
+      );
+      setAlbums(albumsTemp);
     })
     .catch(err=>{
       console.log(err);
     })
   }, []);
 
-  console.log(albums);
+  // console.log(albums);
   return (
-    <div>
-      Portfolio
-    </div>
+    <>
+      <h1>Albumy</h1>
+      {albums.length > 0 ? albums.map(elem=> {
+        return <PhotoAlbum key={elem.id} albumId={elem}/> 
+        }
+      ) : null} 
+    </>
   );
 }
 
@@ -50,4 +49,4 @@ export default Portfolio;
 
 
 // get photos with url from a specific dataset
-// https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=0fdf2fb844ae7522e3cb66f51d688f90&photoset_id=72157715905192381&user_id=190195340@N08&extras=url_m&format=json
+// https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=0fdf2fb844ae7522e3cb66f51d688f90&photoset_id=72157715905192381&user_id=190195340@N08&extras=url_m&format=json&nojsoncallback=?
