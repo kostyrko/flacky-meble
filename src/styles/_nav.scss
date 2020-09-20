@@ -1,8 +1,172 @@
+nav {
+  z-index: 10;
+  #toggle {
+    display: none;
+  }
+}
+
+
+
 .home {
   .logo {
     font-size: 2rem;
   }
   .nav {
     background-color: aqua;
+  }
+  .menu-btn {
+    display: none;
+  }
+}
+
+.main-nav {
+  // border: 1px solid blue;
+  background-color: black;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo a {
+    font-size: 2rem;
+    margin-left: 5vw;
+    color: white;
+  }
+
+  .nav {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+  }
+
+  .menu {
+    // border: 1px solid ;
+    // width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+  }
+  .nav-item ~ .nav-item {
+    margin-left: 20px;
+  }
+  .nav-item a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+
+}
+
+@media only screen and (max-width: 992px) {
+  .main-nav {
+    z-index: 10;
+    .container {
+      justify-content: space-between;
+    }
+    .logo-container {
+      background-color: black;
+      width: 100vw;
+      z-index: 10;
+    }
+    .logo a {
+      margin-left: 20px;
+      color: red;
+    }
+    .menu {
+      /* text-align: center; */
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      transition: 5s ease-in-out;
+      position: fixed;
+      top: -320px;
+      transition: all 0.5s ease;
+      overflow: hidden;
+      // z-index: -1;
+      background-color: black;
+      display: block;
+    }
+    .nav-item {
+      margin-left: 15px;
+      a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        /* border-bottom: 1px solid #eaeaea; */
+        margin: 0;
+      }
+    }
+    input[type="checkbox"]:checked ~ .menu {
+      top: 50px;
+      // z-index: -1;
+    }
+    /* ========= Hamburger Button ========== */
+    .menu-btn {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      position: relative;
+      width: 55px;
+      height: 50px;
+      cursor: pointer;
+      margin-right: 2vw;
+      z-index: 10;
+    }
+    
+    .menu-btn__burger {
+      width: 50px;
+      height: 6px;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+      align-self: center;
+    }
+    
+    .menu-btn__burger,
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+      background: gray;
+    }
+    
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 6px;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+    
+    .menu-btn__burger::before {
+      transform: translateY(-16px);
+    }
+    
+    .menu-btn__burger::after {
+      transform: translateY(16px);
+    }
+    
+    /* ========= Animate Hamburger Button ========== */
+    
+    input[type="checkbox"]:checked ~ label > .menu-btn > .menu-btn__burger {
+      background: transparent;
+      box-shadow: none;
+    }
+    #toggle:checked ~ label > .menu-btn > .menu-btn__burger::before {
+      transform: rotate(45deg);
+    }
+    input[type="checkbox"]:checked ~ label > .menu-btn > .menu-btn__burger::after {
+      transform: rotate(-45deg);
+    }
   }
 }

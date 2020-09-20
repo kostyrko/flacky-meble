@@ -6,35 +6,45 @@ import { withRouter } from "react-router";
 
 const Nav = ({location}) => {
 
-  console.log(location);
+  // console.log(location);
   return (
-    <div className={location.pathname==='/' ? "home": 'main-nav'}>
+    <nav className={location.pathname==='/' ? "home": 'main-nav'}>
       <div className="container">
-        <h1 className="logo">
-        {/* <a href="/">Flacky <span>Combination</span></a> */}
-        <NavLink exact to='/'>Logo</NavLink>
-        </h1>
-      
-      <ul className="nav">
-        <li className="nav_link services">
-          <NavLink exact to='/uslugi'>Nasze usługi</NavLink>
-        </li>
-        <li className="nav_link about">
-          <NavLink exact to='/onas'>O nas</NavLink>
-        </li>
-        <li className="nav_link portfolio">
-          <NavLink exact to='/projekty'>Zrealizowane projekty</NavLink>
-        </li>
-        <li className="nav_link calculator">
-          <NavLink exact to='/kalkulator'>Wycena projektu</NavLink>
-        </li>
-        <li className="nav_link contact">
-          <NavLink exact to='/kontakt'>Kontakt</NavLink>
-        </li>
-      </ul>
-    </div>
-    </div>
+        <div className="logo-container">
+          <h1 className="logo">
+            <NavLink exact to='/'>Logo</NavLink>
+          </h1>
+        </div>
+
+        <input type="checkbox" name="hamburger-btn" id="toggle"/>
+        <label className="toggle" htmlFor="toggle">
+          <div className="menu-btn">
+            <div className="menu-btn__burger"></div>
+          </div>
+        </label>
+
+
+        <ul className="menu hamburger-nav">
+          <li className="nav-item services">
+            <NavLink exact to='/uslugi'>Nasze usługi</NavLink>
+          </li>
+          <li className="nav-item about">
+            <NavLink exact to='/onas'>O nas</NavLink>
+          </li>
+          <li className="nav-item portfolio">
+            <NavLink exact to='/projekty'>Zrealizowane projekty</NavLink>
+          </li>
+          <li className="nav-item calculator">
+            <NavLink exact to='/kalkulator'>Wycena projektu</NavLink>
+          </li>
+          <li className="nav-item contact">
+            <NavLink exact to='/kontakt'>Kontakt</NavLink>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
+
 export const NavWithRouter = withRouter(Nav);
 
