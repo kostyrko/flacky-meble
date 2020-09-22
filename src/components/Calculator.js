@@ -9,7 +9,7 @@ const Calculator = () => {
   // set walls
   const walls = []
   for (let i=1; i<=wallNum; i++) {
-    walls.push(<Wall num={i}/>)
+    walls.push(<Wall key={i} num={i}/>)
   }
 
   const handleWallNumChange = e => {
