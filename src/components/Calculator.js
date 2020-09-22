@@ -9,7 +9,8 @@ const Calculator = () => {
   // set walls
   const walls = []
   for (let i=1; i<=wallNum; i++) {
-    walls.push(<Wall key={i} num={i}/>)
+    walls.push(
+    <Wall key={i} num={i}/>)
   }
 
   const handleWallNumChange = e => {
@@ -18,7 +19,7 @@ const Calculator = () => {
 
   // ! console.logs
 
-  console.log(wallNum);
+  // console.log(wallNum);
 
   return (
     <>
@@ -29,6 +30,7 @@ const Calculator = () => {
           <input type="radio" value={2} name="wallNum"/> 2
         </div>
           {walls}
+
       </form>
     </>
   );

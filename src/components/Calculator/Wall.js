@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 
+import KitchenUnits from './KitchenUnits'
+
+
 export const Wall = ({num}) => {
   const [dimensions, setDimensions] = useState({
     width: 100,
@@ -15,13 +18,13 @@ export const Wall = ({num}) => {
 
   const handleChange = e => {
     const {name, value} = e.target;
-    console.log(name,value);
+    // console.log(name,value);
     setDimensions({
       ...dimensions,
       [name] : parseInt(value),
     })
   }
-  console.log(wallStyle);
+  // console.log(wallStyle);
   // TODO walidacja -> ściana nie może być mniejsza niż 50
   return (
     <div className="wall-container">
@@ -33,6 +36,7 @@ export const Wall = ({num}) => {
         <input name="height" type="number" value={height} onChange={handleChange}/>
       <div className="wall" style={wallStyle}>
       </div>
+      <KitchenUnits/>
     </div>    
   );
 }
