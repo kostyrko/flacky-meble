@@ -41,7 +41,9 @@ const PhotoAlbum = ({albumId}) => {
 
 export default PhotoAlbum;
 
-// TODO: url of a Small img -> _m.jpg
+
+// TODO wprowadzic zdjęcia o małej rozdzielczości, a następnie powiększanie do medium po kliknięciu
+// * url of a Small img -> _m.jpg
 // https://live.staticflickr.com/65535/50323994487_2fe51a825d_m.jpg
-// TODO: ulr of Medium img
+// * ulr of Medium img
 // https://live.staticflickr.com/65535/50323994487_2fe51a825d.jpg

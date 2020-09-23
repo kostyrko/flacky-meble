@@ -30,7 +30,6 @@ const Calculator = () => {
           <input type="radio" value={2} name="wallNum"/> 2
         </div>
           {walls}
-
       </form>
     </>
   );
