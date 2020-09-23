@@ -1,11 +1,12 @@
 import React from 'react';
 
-const SelectOption = ({type, name,handleNumChange, selectedNum, price}) => {
+const SelectOption = ({type, name,handleNumChange, selectedNum, price, width}) => {
   // console.log('selectedNum', selectedNum);
   return (
     <div className="option1">
           <h3>Szafka {name}</h3>
           <p>Cena wyjściowa: {price} pln</p>
+          <p>szerokość wyjściowa: {width} cm</p>
           <img src="https://github.com/kostyrko/flacky-meble/blob/dev/img/typ1.jpg?raw=true" alt={name}/>
           <select name={type} value={selectedNum} onChange={handleNumChange}>
             <option value="">Wybierz ilość</option>
