@@ -1,22 +1,18 @@
 import React from 'react';
 
-const SelectOption = ({type, name,handleNumChange, selectedNum, price, width}) => {
-  // console.log('selectedNum', selectedNum);
+const SelectOption = ({name,addNewUnit, price, width, typeOfUnits, type}) => {
+  // console.log(typeOfUnits);
+  const handleClick = e => {
+    e.preventDefault();
+    addNewUnit({name:name,price:price, width:width, type:type, typeOfUnits:typeOfUnits})
+  }
   return (
-    <div className="option1">
+    <div className="option">
           <h3>Szafka {name}</h3>
           <p>Cena wyjściowa: {price} pln</p>
           <p>szerokość wyjściowa: {width} cm</p>
           <img src="https://github.com/kostyrko/flacky-meble/blob/dev/img/typ1.jpg?raw=true" alt={name}/>
-          <select name={type} value={selectedNum} onChange={handleNumChange}>
-            <option value="">Wybierz ilość</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
+          <button onClick={e=>handleClick(e)}>Dodaj</button>
     </div>
   );
 }

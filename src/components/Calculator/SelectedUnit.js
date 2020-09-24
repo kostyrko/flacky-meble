@@ -1,36 +1,41 @@
 import React, {useState} from 'react';
 
-const SelectedUnit = ({type, number}) => {
-  const {name, width, price} = type
-  const [newWidth, setNewWidth] = useState(width)
-  const [newPrice, setNewPrice] = useState(price)
+const SelectedUnit = ({info, handleInput, handleDelete, elem}) => {
+  console.log(info);
+  const {id, name, width, price, typeOfUnits} = info
 
-  const dimensions = {
-    width: parseInt(newWidth),
-    height: 50
-  }
+
+  // const dimensions = {
+  //   width: parseInt(newWidth)
+  //   height: 50
+  // }
 
   // console.log(dimensions);
 
   // set new price and with of a unit according to user input
-  const handleChange = e => {
-    const {value} = e.target
-    setNewWidth(value)
-    setNewPrice(value*10)
-  }
+  // const handleChange = e => {
+  //   const {value} = e.target
+  //   setNewWidth(value)
+  //   setNewPrice(value*10)
+  // }
 
-  const unitStyle = {
-    backgroundColor: 'brown',
-    ...dimensions
+  // const unitStyle = {
+  //   backgroundColor: 'brown',
+  //   ...dimensions
+  // }
+  const handleClick = e=> {
+    e.preventDefault()
+    handleDelete(e)
   }
 
   return (
     <li>
-      <div style={unitStyle}></div>
-      <h3>{name} numer {number}</h3>
-      <p>Cena {newPrice}</p>
-      <p>szerokość {newWidth}</p>
-      <input type="number" name="" id="" value={newWidth} onChange={handleChange}/>
+      <h3>Nazwa {name}</h3>
+      <p>numer/id: {id}</p>
+      <p>Cena {price}</p>
+      <p>szerokość {width}</p>
+      <input type="number" data-type={typeOfUnits} value={width} name={elem} onChange={handleInput}/>
+      <button  name={elem} data-type={typeOfUnits} onClick={e=>handleClick(e)}>Usuń</button>
     </li>
   );
 }
