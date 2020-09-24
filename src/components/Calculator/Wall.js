@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { kitchenUnits } from "./db";
 import KitchenUnits from "./KitchenUnits";
 import SelectedUnit from "./SelectedUnit";
+import DrawingUnit from "./DrawingUnit";
 
 export const Wall = ({ num }) => {
   // * handle wall dimensions
@@ -79,7 +80,7 @@ export const Wall = ({ num }) => {
   }
 
   // * draw kitchen units
-  const unitsDrawing = []
+  // const unitsDrawing = []
   
   
   console.log('lowerUnits', lowerUnits);
@@ -99,7 +100,24 @@ export const Wall = ({ num }) => {
         onChange={handleChange}
       />
       <div className="wall" style={wallStyle}>
-        {/* {drawUnits} */}
+        <div className="upperUnitsDrawing">
+          {upperUnits &&
+            Object.keys(upperUnits).map((elem) => (
+              <DrawingUnit
+                key={elem}
+                info={upperUnits[elem]}
+              />
+          ))}
+        </div>
+        <div className="lowerUnitsDrawing">
+          {lowerUnits &&
+            Object.keys(lowerUnits).map((elem) => (
+              <DrawingUnit
+                key={elem}
+                info={lowerUnits[elem]}
+              />
+          ))}
+        </div>
       </div>
       
       <ul className="upperUnits">

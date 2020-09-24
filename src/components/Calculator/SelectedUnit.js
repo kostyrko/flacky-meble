@@ -1,28 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 const SelectedUnit = ({info, handleInput, handleDelete, elem}) => {
   console.log(info);
   const {id, name, width, price, typeOfUnits} = info
 
-
-  // const dimensions = {
-  //   width: parseInt(newWidth)
-  //   height: 50
-  // }
-
-  // console.log(dimensions);
-
-  // set new price and with of a unit according to user input
-  // const handleChange = e => {
-  //   const {value} = e.target
-  //   setNewWidth(value)
-  //   setNewPrice(value*10)
-  // }
-
-  // const unitStyle = {
-  //   backgroundColor: 'brown',
-  //   ...dimensions
-  // }
   const handleClick = e=> {
     e.preventDefault()
     handleDelete(e)

@@ -11,6 +11,9 @@
       height: 100px;
     }
   }
+  ul {
+    width: 400px;
+  }
   li {
     margin: 5px;
     border: 1px solid black;
@@ -20,5 +23,23 @@
   }
   .upperUnits {
     background-color: rgba(240, 128, 128, 0.507);
+  }
+  .wall {
+    margin-left: 20px;
+    position: relative;
+    .upperUnitsDrawing {
+      display: flex;
+      .upperUnits {
+        background-color:rgba(255, 0, 0, 0.2);
+      }
+    }
+    .lowerUnitsDrawing {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      .lowerUnits {
+        background-color: rgba(0, 0, 255, 0.2),
+      }
+    }
   }
 }
