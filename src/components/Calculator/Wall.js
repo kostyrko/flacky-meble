@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { kitchenUnits } from "./db";
 import KitchenUnits from "./KitchenUnits";
-import SelectedUnit from "./SelectedUnit";
 import DrawingUnit from "./DrawingUnit";
 import UnitsList from "./UnitsList";
 
-export const Wall = ({ num }) => {
+export const Wall = ({ num, handleConfirmation }) => {
   // * handle wall dimensions
   const [dimensions, setDimensions] = useState({
     width: 400,
@@ -27,6 +26,11 @@ export const Wall = ({ num }) => {
       [name]: parseInt(value),
     });
   };
+
+  const handleClick = e => {
+    e.preventDefault()
+    handleConfirmation(customKitchenUnits)
+  }
 
   // * variables and state to handle selection of units => SelectOption component
   const [customKitchenUnits, setCustomKitchenUnits] = useState({});
@@ -86,7 +90,7 @@ export const Wall = ({ num }) => {
 
   
   
-  console.log('lowerUnits', lowerUnits);
+  // console.log('lowerUnits', lowerUnits);
 
   // TODO walidacja -> ściana nie może być mniejsza niż 50
   return (
@@ -121,8 +125,12 @@ export const Wall = ({ num }) => {
               />
           ))}
         </div>
+        
       </div>
-      
+      <div className="summery">
+          <p>Suma: </p>
+          <button className="confirm" onClick={e=>handleClick(e)}>Zatwierdzam wybór</button>
+      </div>
       <ul className="upperUnits">
         <UnitsList type={upperUnits} handleInput={handleInput} handleDelete={handleDelete} />
       </ul>
