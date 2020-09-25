@@ -28,17 +28,11 @@ export const Wall = ({ num }) => {
     });
   };
 
-  // * variables to handle KitchenUnits component
-  const upperUnitTypes = Object.keys(kitchenUnits.upperUnits);
-  const lowerUnitTypes = Object.keys(kitchenUnits.lowerUnits);
   // * variables and state to handle selection of units => SelectOption component
   const [customKitchenUnits, setCustomKitchenUnits] = useState({});
   const { lowerUnits, upperUnits } = customKitchenUnits;
   const [id, setId] = useState(0);
 
-  useEffect(() => {
-    console.log('state changed', customKitchenUnits);
-  }, [customKitchenUnits]);
   
   const addNewUnit = (newUnit) => {
     const { type, width, price, name, typeOfUnits } = newUnit;
@@ -137,8 +131,6 @@ export const Wall = ({ num }) => {
       </ul>
 
       <KitchenUnits
-        upperUnitTypes={upperUnitTypes}
-        lowerUnitTypes={lowerUnitTypes}
         addNewUnit={addNewUnit}
         kitchenUnits={kitchenUnits}
       />

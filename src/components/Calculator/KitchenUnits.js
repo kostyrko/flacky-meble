@@ -4,8 +4,9 @@ import SelectOption from './SelectOption'
 
 
 export const KitchenUnits = (props) => {
-  const {upperUnitTypes,lowerUnitTypes, addNewUnit,kitchenUnits} = props
-
+  const {addNewUnit,kitchenUnits} = props
+  const upperUnitTypes = Object.keys(kitchenUnits.upperUnits);
+  const lowerUnitTypes = Object.keys(kitchenUnits.lowerUnits);
   return (
     <div>
       <h2>Szafki wiszące</h2>
