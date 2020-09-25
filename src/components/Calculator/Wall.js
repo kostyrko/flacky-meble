@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { kitchenUnits } from "./db";
 import KitchenUnits from "./KitchenUnits";
 import SelectedUnit from "./SelectedUnit";
 import DrawingUnit from "./DrawingUnit";
+import UnitsList from "./UnitsList";
 
 export const Wall = ({ num }) => {
   // * handle wall dimensions
@@ -35,6 +36,10 @@ export const Wall = ({ num }) => {
   const { lowerUnits, upperUnits } = customKitchenUnits;
   const [id, setId] = useState(0);
 
+  useEffect(() => {
+    console.log('state changed', customKitchenUnits);
+  }, [customKitchenUnits]);
+  
   const addNewUnit = (newUnit) => {
     const { type, width, price, name, typeOfUnits } = newUnit;
     setId((id) => id + 1);
@@ -71,16 +76,20 @@ export const Wall = ({ num }) => {
     });
   };
 
-  // TODO: handle delete with useEffect
+  // delete item from customKitchenUnits 
   const handleDelete = e => {
     const {dataset, name} = e.target
-    // console.log(dataset.type, name);
-    console.log(customKitchenUnits[dataset.type][name]);
-    delete customKitchenUnits[dataset.type][name]
+    // console.log('delete',dataset.type, name);
+    // delete customKitchenUnits[dataset.type][name];
+    // setCustomKitchenUnits({
+    //   ...customKitchenUnits})
+
+    let temp = {...customKitchenUnits}
+    delete temp[dataset.type][name]
+    setCustomKitchenUnits({
+      ...temp})
   }
 
-  // * draw kitchen units
-  // const unitsDrawing = []
   
   
   console.log('lowerUnits', lowerUnits);
@@ -121,28 +130,10 @@ export const Wall = ({ num }) => {
       </div>
       
       <ul className="upperUnits">
-        {upperUnits &&
-          Object.keys(upperUnits).map((elem) => (
-            <SelectedUnit
-              key={elem}
-              elem={elem}
-              handleInput={handleInput}
-              handleDelete={handleDelete}   
-              info={upperUnits[elem]}
-            />
-          ))}
+        <UnitsList type={upperUnits} handleInput={handleInput} handleDelete={handleDelete} />
       </ul>
       <ul className="lowerUnits">
-        {lowerUnits &&
-          Object.keys(lowerUnits).map((elem) => (
-            <SelectedUnit
-              key={elem}
-              elem={elem}
-              handleDelete={handleDelete} 
-              handleInput={handleInput}
-              info={lowerUnits[elem]}
-            />
-          ))}
+      <UnitsList type={lowerUnits} handleInput={handleInput} handleDelete={handleDelete} />
       </ul>
 
       <KitchenUnits
