@@ -12,18 +12,34 @@ const Calculator = () => {
     setWallNum(parseInt(e.target.value));
   };
 
-  const handleConfirmation = data => {
+  const handleConfirmation = (data, price, lining, num) => {
     console.log('data',data);
-    setProject(JSON.stringify(data));
-    setProject(
+    // setProject(JSON.stringify(data));
+    let upper = []
+    let lower = []
+
+    console.log('keys',Object.keys(data.upperUnits));
+    if (Object.keys(data.upperUnits)) {
+      Object.keys(data.upperUnits).forEach(elem=> {
+        const {name, width, id} =data.upperUnits[elem]
+        upper.push(`${id}) ${name}, szerokość: ${width} `)})
+    }
+    if (Object.keys(data.lowerUnits)) {
+      Object.keys(data.lowerUnits).forEach(elem=> {
+        const {name, width, id} =data.lowerUnits[elem]
+        lower.push(`${id}) ${name}, szerokość: ${width} `)})
+    }
+    setProject( [...project,
       `
-Ściana X
-Szafki wiszące:
-${JSON.stringify(data.upperUnits)}
-Szafki stojące:
-${JSON.stringify(data.lowerUnits)}
-`
-    );
+      Ściana ${num}
+      Rodzaj okładziny: ${lining} 
+      Szacunkowy koszt: ${price} 
+      Szafki wiszące:
+      ${upper}
+      Szafki stojące:
+      ${lower}
+      `
+    ]);
     // console.log('project',project);
   }
 

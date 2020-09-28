@@ -29,7 +29,7 @@ export const Wall = ({ num, handleConfirmation }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    handleConfirmation(customKitchenUnits);
+    handleConfirmation(customKitchenUnits, priceWithLining,lining, num);
   };
 
   // * variables and state to handle selection of units => SelectOption component
@@ -69,7 +69,7 @@ export const Wall = ({ num, handleConfirmation }) => {
       );
       let temp2 = temp.reduce((elem, acc) => elem + acc, 0);
       setPrice(temp2);
-      console.log('price',price);
+      // console.log('price',price);
   }
 
   const handleRadioInput = (e) => {
@@ -79,7 +79,7 @@ export const Wall = ({ num, handleConfirmation }) => {
   };
   
   const priceSummery = () => {
-    console.log('lining priceSummery:',lining);
+    // console.log('lining priceSummery:',lining);
     let temp;
     if (lining === "lakier") {
       temp = 0;
