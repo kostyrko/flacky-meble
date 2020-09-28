@@ -13,8 +13,17 @@ const Calculator = () => {
   };
 
   const handleConfirmation = data => {
-    // console.log('data',data);
-    setProject(JSON.stringify(data))
+    console.log('data',data);
+    setProject(JSON.stringify(data));
+    setProject(
+      `
+Ściana X
+Szafki wiszące:
+${JSON.stringify(data.upperUnits)}
+Szafki stojące:
+${JSON.stringify(data.lowerUnits)}
+`
+    );
     // console.log('project',project);
   }
 
@@ -27,7 +36,7 @@ const Calculator = () => {
         <WallsOption onChange={handleWallNumChange} />
         {walls && walls.map((elem) => <Wall key={elem} num={elem} handleConfirmation={handleConfirmation} />)}
       </form>
-      <input className="project-summery" type="text" value={project}/>
+      <textarea className="project-summery" value={project}/>
     </>
   );
 };

@@ -13,8 +13,7 @@ export const KitchenUnits = (props) => {
       <div className="options">
         {
           upperUnitTypes.map((elem,i)=> {
-            const {name, quantity, width, price} = kitchenUnits.upperUnits[elem]
-            return <SelectOption type={elem} key={i} name={name} addNewUnit={addNewUnit} selectedNum={quantity} price={price} width={width}
+            return <SelectOption type={elem} key={i} info={kitchenUnits.upperUnits[elem]} addNewUnit={addNewUnit} 
               typeOfUnits={'upperUnits'}
             />
           })
@@ -24,8 +23,8 @@ export const KitchenUnits = (props) => {
       <div className="options">
         {
           lowerUnitTypes.map((elem,i)=> {
-            const {name, quantity, width, price} = kitchenUnits.lowerUnits[elem]
-            return <SelectOption type={elem} key={i} name={name} addNewUnit={addNewUnit} selectedNum={quantity} price={price} width={width} typeOfUnits={'lowerUnits'}/>
+            return <SelectOption type={elem} key={i} info={kitchenUnits.lowerUnits[elem]} addNewUnit={addNewUnit} 
+              typeOfUnits={'lowerUnits'}/>
           })
         }
       </div>

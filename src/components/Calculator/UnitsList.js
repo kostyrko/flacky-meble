@@ -1,7 +1,7 @@
 import React from 'react';
 import SelectedUnit from './SelectedUnit'
 
-const UnitsList = ({type, handleInput, handleDelete}) => {
+const UnitsList = ({type, handleInput, handleDelete, handleRadio}) => {
   return (
     <>
       {type &&
@@ -10,7 +10,7 @@ const UnitsList = ({type, handleInput, handleDelete}) => {
             key={elem}
             elem={elem}
             handleInput={handleInput}
-            handleDelete={handleDelete}   
+            handleDelete={handleDelete}
             info={type[elem]}
           />
         ))}
