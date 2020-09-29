@@ -30,7 +30,7 @@ export const Wall = ({ num, handleConfirmation }) => {
   const handleClick = (e) => {
     console.log('clicked');
     e.preventDefault();
-    handleConfirmation(customKitchenUnits, priceWithLining,lining, num);
+    handleConfirmation(customKitchenUnits, priceWithLining,lining, num, dimensions);
   };
 
   // * variables and state to handle selection of units => SelectOption component
@@ -145,6 +145,8 @@ export const Wall = ({ num, handleConfirmation }) => {
   // console.log('lowerUnits', lowerUnits);
 
   // TODO walidacja -> ściana nie może być mniejsza niż 50
+  // TODO walidacja -> summery jako osobny komponent
+  
   return (
     <div className="wall-container">
       <h2>Ściana nr {num}</h2>
@@ -181,7 +183,7 @@ export const Wall = ({ num, handleConfirmation }) => {
           <input {...radioButton} value="fornir" id="fornir" /> Fornir
           <input {...radioButton} value="melamina" id="melamina" /> Melamina
         </div>
-        <button className="confirm" onClick={(e) => handleClick(e)}>
+        <button className="confirm" onClick={e => handleClick(e)}>
           Zatwierdzam wybór
         </button>
       </div>
