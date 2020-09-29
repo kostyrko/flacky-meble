@@ -141,11 +141,6 @@ export const Wall = ({ num, handleConfirmation }) => {
     name: "lining",
     onChange: handleRadioInput,
   };
-
-  // console.log('lowerUnits', lowerUnits);
-
-  // TODO walidacja -> ściana nie może być mniejsza niż 50
-  // TODO walidacja -> summery jako osobny komponent
   
   return (
     <div className="wall-container">
@@ -179,7 +174,7 @@ export const Wall = ({ num, handleConfirmation }) => {
         <p>Suma: {priceWithLining}</p>
         <label htmlFor="lining-options">Rodzaj okładziny</label>
         <div name="lining-options" className="radio-form">
-          <input {...radioButton} value="lakier" id="" /> Lakierowana
+          <input {...radioButton} value="lakier" id="lakier" /> Lakierowana
           <input {...radioButton} value="fornir" id="fornir" /> Fornir
           <input {...radioButton} value="melamina" id="melamina" /> Melamina
         </div>

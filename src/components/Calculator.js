@@ -8,7 +8,6 @@ const Calculator = () => {
   // number of walls
   const [wallNum, setWallNum] = useState(0);
   const [project, setProject] = useState({});
-  const [addInfo, setAddInfo] = useState('')
 
   // set num of walls -> wallNum
   const handleWallNumChange = (e) => {
@@ -29,9 +28,9 @@ const Calculator = () => {
         ...data,
       }
     })
-
   }
-  console.log('project',project);
+  // console.log('project',Object.keys(project).length > 0);
+  // console.log('project',project);
 
 
   return (
@@ -40,12 +39,12 @@ const Calculator = () => {
         <WallsOption onChange={handleWallNumChange} />
         {walls && walls.map((elem) => <Wall key={elem} num={elem} handleConfirmation={handleConfirmation} />)}
       </form>
-      <section className="summery">
-        {project &&
-          <Summery data={project}/>}
-      </section>
-      <textarea className="project-summery" value={addInfo} onChange={e=>setAddInfo(e.target.value)}/>
-      <ContactForm/>
+      {Object.keys(project).length > 0 &&
+        <>
+          <Summery data={project}/>
+          <ContactForm data={project}/>
+        </>
+      }
     </>
   );
 };
