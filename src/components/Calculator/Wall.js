@@ -28,6 +28,7 @@ export const Wall = ({ num, handleConfirmation }) => {
   };
 
   const handleClick = (e) => {
+    console.log('clicked');
     e.preventDefault();
     handleConfirmation(customKitchenUnits, priceWithLining,lining, num);
   };
