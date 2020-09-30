@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { kitchenUnits } from "./db";
 import KitchenUnits from "./KitchenUnits";
-import DrawingUnit from "./DrawingUnit";
+import DrawUnit from "./DrawUnit";
 import UnitsList from "./UnitsList";
 
 export const Wall = ({ num, handleConfirmation }) => {
@@ -159,13 +159,13 @@ export const Wall = ({ num, handleConfirmation }) => {
         <div className="upperUnitsDrawing">
           {upperUnits &&
             Object.keys(upperUnits).map((elem) => (
-              <DrawingUnit key={elem} info={upperUnits[elem]} />
+              <DrawUnit key={elem} info={upperUnits[elem]} />
             ))}
         </div>
         <div className="lowerUnitsDrawing">
           {lowerUnits &&
             Object.keys(lowerUnits).map((elem) => (
-              <DrawingUnit key={elem} info={lowerUnits[elem]} />
+              <DrawUnit key={elem} info={lowerUnits[elem]} />
             ))}
         </div>
       </div>

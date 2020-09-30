@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DrawingUnit = ({info}) => {
+const DrawUnit = ({info}) => {
   const {id,width,height,name, typeOfUnits} = info
   
   const dimensions = {
@@ -21,4 +21,4 @@ const DrawingUnit = ({info}) => {
   );
 }
 
-export default DrawingUnit;
+export default DrawUnit;
