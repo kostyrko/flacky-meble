@@ -12,7 +12,10 @@ const Nav = ({location}) => {
       <div className="container">
         <div className="logo-container">
           <h1 className="logo">
-            <NavLink exact to='/'>Logo</NavLink>
+            <NavLink exact to='/'> <span className="name-1">Flacky</span>
+            <span className="name-2"> combination</span>
+            <p className="logo-desc"> <span>MEBLE na MIARĘ</span> Twoich potrzeb</p>
+            </NavLink>
           </h1>
         </div>
 

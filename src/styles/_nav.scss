@@ -1,23 +1,210 @@
 nav {
   z-index: 10;
+  a {
+    color: white;
+    text-decoration: none;
+  }
   #toggle {
     display: none;
   }
+  .logo {
+    font-style:'News Cycle', sans-serif;
+    .name {
+      color: $secondary-red;
+    }
+  }
 }
 
 
-
+// NAVIGATION on HOME page
 .home {
-  .logo {
-    font-size: 2rem;
+  background-color:$light-gray;
+  height: 100vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://live.staticflickr.com/65535/50324132581_590891a2e2.jpg");
+  @include flex-center;
+  .container {
+    width: 100vw;
   }
-  .nav {
-    background-color: aqua;
+  .logo-container {
+    height: 15%;
+    overflow: hidden;
+    .logo {
+      @include flex-center;
+      color: $main-gray;
+      position: absolute;
+      top: 0;
+      font-size: 1.25rem;
+      width: 100vw;
+      margin-bottom: 5%;
+      min-height: 80px;
+      text-align: center;
+      background-color: $main-black;
+
+      a {
+        margin: 10px;
+        padding: 10px 10px;
+        border-radius: 15px;
+      }
+      .name {
+        font-size: 2rem;
+      }
+    }
   }
+  
   .menu-btn {
     display: none;
   }
+  .menu {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 10%;
+    .services, .calculator {
+      border: 1vh solid $main-red;
+    }
+    .about, .portfolio, .contact {
+      border: 1vh solid $main-gray;
+    }
+    .nav-item {
+      @include flex-center;
+      height: 2vh;
+      background-color: $main-black-trans;
+      border-radius: 25px;
+      padding: 5% 0;
+      width: 90%;
+      margin: 5px 0 5px 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      a {
+        font-size: 1.25rem;
+      }
+    }
+  }
 }
+
+@media only screen and (min-width: 992px) { 
+  .home {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: none;
+    &>.container {
+      max-width: 1400px;
+      height: 99vh;
+      overflow: hidden;
+      }
+      .logo-container {
+        margin: 5px 1%;
+        width: 96%;
+        border-radius: 25px;
+        height: 28vh;
+        grid-area: header;
+        border: 6px solid $main-red ;
+        position: relative;
+        .logo{
+          position: inherit;
+          height: 100%;
+          background-repeat: no-repeat;
+          // background-size: cover;
+          background-position: center;
+          background-image: url("http://flacky.pl/wp-content/themes/twentyeleven/images/headers/hanoi.jpg");
+          .name-1, .name-2 {
+            display: none;
+          }
+          .logo-desc {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            position: absolute;
+            // right: 0;
+            // border: 1px solid $main-red;
+            color: $main-gray-trans;
+            span {
+              color: white;
+            }
+          }
+        }
+      }
+      .menu {
+        height: 69%;
+        margin: 1%;
+        margin-top: 0;
+        justify-content:start;
+        align-items: start;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5px 5px;
+        grid-template-areas: "services portfolio portfolio" "services  calculator contact" "services  about contact";
+        .nav-item {
+          width: 95%;
+          height: 95%;
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          &:hover {
+            a {
+              font-size: 1.85rem;
+            }
+          }
+          a {
+            color: black;
+            @include flex-center;
+            width: 100%;
+            text-align: center;
+            background-color: $main-gray-trans;
+            height: 60%;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+        .services, .calculator {
+          border: 8px solid $main-red ;
+        }
+        .about, .portfolio, .contact {
+          border: 5px solid $main-gray ;
+        }
+        .services {
+          grid-area: services;
+          background-image: url("https://live.staticflickr.com/65535/50324132581_590891a2e2.jpg");
+        }
+        .about {
+          grid-area: about;
+          height: 86%;
+          width: 96%;
+          margin-top: 5px;
+          background-image: url("https://live.staticflickr.com/65535/50323792811_f318a5c827.jpg");
+        }
+        .portfolio {
+          grid-area: portfolio;
+          width: 98%;
+          background-image: url("https://live.staticflickr.com/65535/50323455768_2c7f8e88c2.jpg");
+        }
+        .contact {
+          grid-area: contact;
+          width: 95%;
+          background-image: url("https://live.staticflickr.com/65535/50324039627_806c054efb.jpg");
+        }
+        .calculator {
+          grid-area: calculator;
+          background-image: url("https://live.staticflickr.com/65535/50324302302_99010173c3.jpg");
+        }
+      }
+      
+    }
+}
+
+
+// NAVIGATION on ALL PAGES except HOME
 
 .main-nav {
   // border: 1px solid blue;

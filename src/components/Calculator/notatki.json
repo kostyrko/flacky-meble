@@ -1,0 +1,11 @@
+
+      {"wall1":
+            {"num":1,"price":1750,"lining":"fornir",
+                  "dimensions":{"width":400,"height":250},
+            
+            "upperUnits":{"type2_1":{"name":"typ-2","price":500,"width":55,"height":100,"type":"type2","typeOfUnits":"upperUnits","id":1},"type1_4":{"name":"typ-1","price":600,"width":60,"height":100,"type":"type1","typeOfUnits":"upperUnits","id":4}},
+            
+            "lowerUnits":{"type4_2":{"name":"typ-4","price":300,"width":45,"height":100,"type":"type4","typeOfUnits":"lowerUnits","id":2},"type4_3":{"name":"typ-4","price":300,"width":45,"height":100,"type":"type4","typeOfUnits":"lowerUnits","id":3}}},
+            
+      "wall2":{"num":2,"price":1975,"lining":"melamina","dimensions":{"width":400,"height":250},"upperUnits":{"type1_1":{"name":"typ-1","price":600,"width":60,"height":100,"type":"type1","typeOfUnits":"upperUnits","id":1},"type1_2":{"name":"typ-1","price":600,"width":60,"height":100,"type":"type1","typeOfUnits":"upperUnits","id":2}},"lowerUnits":{"type4_3":{"name":"typ-4","price":300,"width":45,"height":100,"type":"type4","typeOfUnits":"lowerUnits","id":3},"type3_4":{"name":"typ-3","price":400,"width":50,"height":100,"type":"type3","typeOfUnits":"lowerUnits","id":4}}}}
+    
