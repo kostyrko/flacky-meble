@@ -1,3 +1,46 @@
+
+
+.calculator-section {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .calculator-info {
+    @include flex-center;
+    flex-direction: column;
+    max-width: 1200px;
+  }
+  .instruction-list {
+    list-style: inside decimal;
+    text-align: center;
+    .instruction-elem {
+      padding: 10px;
+    }
+  }
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .project-form {
+    .walls-option {
+      margin: 2% 0;
+      text-align: center;
+      label {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+    }
+    border-top: 1px solid $main-gray;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .options {
   display: flex;
 }
@@ -13,25 +56,39 @@
 }
 
 .wall-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // margin: 10px;
     .option {
-      border: 1px solid black;
+      margin: 10px;
+      border: 1px solid $main-gray-trans;
     }
     img {
       height: 100px;
     }
   }
   ul {
-    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
   }
   li {
     margin: 5px;
     border: 1px solid black;
+    max-width: 200px;
+    input {
+      max-width: 100px;
+    }
   }
-  .lowerUnits {
+  .lowerUnits li {
     background-color: rgba(173, 216, 230, 0.575);
   }
-  .upperUnits {
+  .upperUnits li {
     background-color: rgba(240, 128, 128, 0.507);
   }
   .wall {
@@ -51,5 +108,34 @@
         background-color: rgba(0, 0, 255, 0.2),
       }
     }
+  }
+  .kitchen-units {
+    h4 {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 20px;
+      border-top: 2px solid $main-gray;
+      line-height: 3rem
+    }
+  }
+}
+
+// Contact form
+
+.contact-form {
+  .validation {
+    p {
+      margin: 5px 0;
+      // min-width: 50vw;
+      padding: 10px;
+      color: white;
+      background-color: $main-red;
+      border-radius: 25px;
+    }
+  }
+  .submit {
+    width: 100%;
+    @include flex-center;
   }
 }

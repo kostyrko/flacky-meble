@@ -1,0 +1,50 @@
+// .services-section {
+//   // background-color: red;
+//   height: 100vh;
+//   @include flex-center;
+//   .container {
+//     width: 1200px;
+//     border: 1 solid black;
+//     font-size: 1.5rem;
+//   }
+// }
+
+@media only screen and (min-width: 782px) and (min-width: 550px)  {
+  .about-section {
+    .container {
+      height: 90vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "text1 photo1" "photo2 text2";
+    }
+    .text-info-1, .text-info-2 {
+      // height: 45vh;
+      display: flex;
+      padding: 15px;
+    }
+    .text-info-1 {
+      grid-area: text1;
+      align-items: center;
+    }
+    .text-info-2 {
+      grid-area: text2; 
+      flex-direction: column;
+      justify-content: center;
+    }
+    .about-photo-1 {
+      grid-area: photo1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url("https://live.staticflickr.com/65535/50324132581_590891a2e2.jpg");
+    }
+    .about-photo-2 {
+      grid-area: photo2;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url("https://live.staticflickr.com/65535/50323792811_f318a5c827.jpg");
+    }
+  }
+} 

@@ -19,7 +19,7 @@ nav {
 // NAVIGATION on HOME page
 .home {
   background-color:$light-gray;
-  height: 100vh;
+  height: 110vh;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,10 +48,19 @@ nav {
         margin: 10px;
         padding: 10px 10px;
         border-radius: 15px;
+        font-size: 1.75rem;
+        .name-1 {
+          font-size: 2rem;
+          font-weight: 600;
+          color: $main-red;
+        }
       }
       .name {
         font-size: 2rem;
       }
+    }
+    p.logo-desc {
+      display: none;
     }
   }
   
@@ -218,10 +227,18 @@ nav {
     display: flex;
     justify-content: space-around;
   }
+  .logo-container {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+  }
   .logo a {
     font-size: 2rem;
     margin-left: 5vw;
     color: white;
+  }
+  .logo-desc {
+    display: none;
   }
 
   .nav {
@@ -236,8 +253,6 @@ nav {
   }
 
   .menu {
-    // border: 1px solid ;
-    // width: 30vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -251,8 +266,6 @@ nav {
     text-transform: uppercase;
     font-weight: 600;
   }
-  
-
 }
 
 @media only screen and (max-width: 992px) {
@@ -265,15 +278,16 @@ nav {
       background-color: black;
       width: 100vw;
       z-index: 10;
+      position: relative;
     }
     .logo a {
       margin-left: 20px;
       color: red;
+      font-size: 1.5rem;
     }
     .menu {
       /* text-align: center; */
       width: 100%;
-      position: absolute;
       top: 80px;
       transition: 5s ease-in-out;
       position: fixed;
@@ -296,6 +310,7 @@ nav {
     }
     input[type="checkbox"]:checked ~ .menu {
       top: 50px;
+      position: absolute;
       // z-index: -1;
     }
     /* ========= Hamburger Button ========== */

@@ -16,7 +16,7 @@ const SelectedUnit = ({info, handleInput, handleDelete, elem}) => {
       <p>Szerokość {width} cm</p>
       <input type="number" data-type={typeOfUnits} value={width} name={elem} onChange={handleInput}/>
       
-      <button  name={elem} data-type={typeOfUnits} onClick={e=>handleClick(e)}>Usuń</button>
+      <button  name={elem} data-type={typeOfUnits} onClick={e=>handleClick(e)}className="btn-2 btn-3">Usuń</button>
     </li>
   );
 }

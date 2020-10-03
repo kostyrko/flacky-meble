@@ -4,7 +4,7 @@ import React from 'react';
 
 const Services = () => {
   return (
-    <section className="services">
+    <section className="services-section">
       <div className="container">
           <h2>Wykonujemy meble na wymiar.</h2>
           <p>Specjalizujemy się w zabudowach kuchennych.</p>

@@ -14,3 +14,52 @@ html {
   // border: 1px solid red;
   // max-width: 200px;
 }
+
+button {
+  color: white;
+  margin: 5px 0;
+}
+
+.btn-1 {
+  padding: 5px 10px;
+  background-color: $graphite;
+  border-radius: $primary-radius;
+  box-shadow: rgb(77, 77, 77) 0px 1px 2px;
+  border: 2px solid $main-gray;
+
+  &:hover{
+    color: white;
+    background-color: $main-gray;
+    border: 2px solid $main-red-trans;
+  }
+  &:focus{
+    border: 2px solid $main-red-trans;
+  }
+  &:active {
+    box-shadow: inset rgb(77, 77, 77) 0px 1px 2px;
+  }
+}
+
+.btn-2 {
+  color: white;
+  padding: 10px 20px;
+  background-color: $main-red-trans;
+  border-radius: $primary-radius;
+  box-shadow: rgb(77, 77, 77) 0px 1px 2px;
+  border: 2px solid $main-red-trans;
+  &:hover{
+    color: white;
+    background-color: $main-red;
+    border: 2px solid $main-red;
+  }
+  &:focus{
+    border: 2px solid $main-red;
+  }
+  &:active {
+    box-shadow: inset rgb(77, 77, 77) 0px 1px 2px;
+  }
+}
+
+.btn-3 {
+  padding: 5px 10px;
+}

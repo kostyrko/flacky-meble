@@ -5,14 +5,14 @@ export const kitchenUnits = {
       width: 60,
       height: 100,
       price: 600,
-      src: 'https://github.com/kostyrko/flacky-meble/blob/dev/img/typ1.jpg?raw=true'
+      src: 'https://0.allegroimg.com/s512/01bb1a/353539834e5bafa3415988702360/Szafka-kuchenna-wiszaca-sonoma-80cm'
     },
     type2 : {
         name: 'typ-2',
         width: 55,
         height: 100,
         price: 500,
-        src: 'https://github.com/kostyrko/flacky-meble/blob/dev/img/typ1.jpg?raw=true'
+        src: 'https://sklep.akord.net.pl/4006-large_default/wiszaca-szafka-kuchenna-oliwia-w-60cm-biala.jpg'
       },
     type3 : {
       name: 'typ-3',
@@ -20,7 +20,7 @@ export const kitchenUnits = {
       height: 80,
       lining: "lakier",
       price: 450,
-      src: 'https://github.com/kostyrko/flacky-meble/blob/dev/img/typ1.jpg?raw=true'
+      src: 'https://0.allegroimg.com/s512/01bb1a/353539834e5bafa3415988702360/Szafka-kuchenna-wiszaca-sonoma-80cm'
     }
     },
   lowerUnits : {

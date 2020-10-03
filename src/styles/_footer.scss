@@ -1,0 +1,11 @@
+.main-footer {
+  font-size: 0.75rem;
+  background-color: $main-black;
+  height: 4vh;
+  color: white;
+  @include flex-center;
+  flex-direction: column;
+  .footer-author{
+    color: $graphite;
+  }
+}

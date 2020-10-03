@@ -8,6 +8,7 @@ import About from './About'
 import Contact from './Contact'
 // import NotFound from './NotFound'
 import {NavWithRouter} from './Nav'
+import Footer from './Footer'
 
 
 
@@ -23,6 +24,7 @@ const Main = () => {
           <Route exact path='/kontakt' component={Contact}/>
           {/* <Route exact path='' component={NotFound}/> */}
         </Switch>
+        <Footer/>
     </BrowserRouter>
   );
 }

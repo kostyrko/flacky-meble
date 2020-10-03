@@ -25,10 +25,9 @@ const PhotoAlbum = ({albumId}) => {
   }, []);
 
   return (
-    <div>
+    <div className="photo-album">
       <h2>{title}</h2>
-      {/* <p>{photsUrls}</p> */}
-      <ul>
+      <ul className="photo-list">
         {photsUrls.map((elem,i)=>
           <li key={i}>
             <img src={elem} alt=""/>

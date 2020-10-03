@@ -8,8 +8,8 @@ export const KitchenUnits = (props) => {
   const upperUnitTypes = Object.keys(kitchenUnits.upperUnits);
   const lowerUnitTypes = Object.keys(kitchenUnits.lowerUnits);
   return (
-    <div>
-      <h2>Szafki wiszące</h2>
+    <div className="kitchen-units">
+      <h4>Szafki wiszące</h4>
       <div className="options">
         {
           upperUnitTypes.map((elem,i)=> {
@@ -19,7 +19,7 @@ export const KitchenUnits = (props) => {
           })
         }
       </div>
-      <h2>Szafki stojące</h2>
+      <h4>Szafki stojące</h4>
       <div className="options">
         {
           lowerUnitTypes.map((elem,i)=> {

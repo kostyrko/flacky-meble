@@ -155,18 +155,20 @@ export const Wall = ({ num, handleConfirmation }) => {
         value={height}
         onChange={handleChange}
       />
-      <div className="wall" style={wallStyle}>
-        <div className="upperUnitsDrawing">
-          {upperUnits &&
-            Object.keys(upperUnits).map((elem) => (
-              <DrawUnit key={elem} info={upperUnits[elem]} />
-            ))}
-        </div>
-        <div className="lowerUnitsDrawing">
-          {lowerUnits &&
-            Object.keys(lowerUnits).map((elem) => (
-              <DrawUnit key={elem} info={lowerUnits[elem]} />
-            ))}
+      <div className="walls-drawing">
+        <div className="wall" style={wallStyle}>
+          <div className="upperUnitsDrawing">
+            {upperUnits &&
+              Object.keys(upperUnits).map((elem) => (
+                <DrawUnit key={elem} info={upperUnits[elem]} />
+              ))}
+          </div>
+          <div className="lowerUnitsDrawing">
+            {lowerUnits &&
+              Object.keys(lowerUnits).map((elem) => (
+                <DrawUnit key={elem} info={lowerUnits[elem]} />
+              ))}
+          </div>
         </div>
       </div>
 
@@ -178,7 +180,7 @@ export const Wall = ({ num, handleConfirmation }) => {
           <input {...radioButton} value="fornir" id="fornir" /> Fornir
           <input {...radioButton} value="melamina" id="melamina" /> Melamina
         </div>
-        <button className="confirm" onClick={e => handleClick(e)}>
+        <button className="btn-1 confirm" onClick={e => handleClick(e)}>
           Zatwierdzam wybór
         </button>
       </div>

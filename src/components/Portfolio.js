@@ -29,13 +29,15 @@ const Portfolio = () => {
 
   // console.log(albums);
   return (
-    <>
-      <h1>Albumy</h1>
+    <div className="portfolio-container">
+      <h1>Zrealizowane przez nas projekty</h1>
+      <div className="albums-container">
       {albums.length > 0 ? albums.map(elem=> {
         return <PhotoAlbum key={elem.id} albumId={elem}/> 
         }
-      ) : null} 
-    </>
+      ) : null}
+      </div>
+    </div>
   );
 }
 

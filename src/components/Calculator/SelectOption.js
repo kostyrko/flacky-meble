@@ -14,7 +14,7 @@ const SelectOption = ({addNewUnit, typeOfUnits, type, info}) => {
           <p>Wysokość: {height} cm</p>
           <p>Szerokość wyjściowa: {width} cm</p>
           <img src={src} alt={name}/>
-          <button onClick={e=>handleClick(e)}>Dodaj</button>
+          <button className="btn-1" onClick={e=>handleClick(e)}>Dodaj</button>
     </div>
   );
 }

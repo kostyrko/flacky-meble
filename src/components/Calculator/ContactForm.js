@@ -51,8 +51,8 @@ wymiary ściany - długość ${dimensions.width}, wysokość ${dimensions.height
   const submitForm=(e)=> {
     e.preventDefault();
     console.log('clicked')
-    if (email.length < 6 || email.indexOf('@') === -1) {
-      setErrors([...errors, 'Email musi być podany mieć przynajmniej 7 znaków i posiadać -> @'])}
+    if (email.length < 7 || email.indexOf('@') === -1) {
+      setErrors([...errors, 'Email musi być podany i mieć przynajmniej 7 znaków oraz posiadać @'])}
     else {
       // empty errors Arr
       setErrors([])
@@ -81,6 +81,7 @@ wymiary ściany - długość ${dimensions.width}, wysokość ${dimensions.height
       onSubmit={submitForm}
       action="https://formspree.io/mwkwpbjl"
       method="POST"
+      className="contact-form"
     > 
       <div className="validation">
         {
@@ -101,13 +102,15 @@ wymiary ściany - długość ${dimensions.width}, wysokość ${dimensions.height
         value={addInfo}
         onChange={(e) => setAddInfo(e.target.value)}
       />
+      <div className="submit">
+        {status === "SUCCESS" ? <p className="feedback-inf">Dziękujemy za przesłanie projektu &#9786;</p> : <button className="submit-project btn-2">Przesyłam swój projekt i proszę o kontakt</button>}
+        {status === "ERROR" && <p> Ups! Coś poszło nie tak &#9785; Sprawdź proszę czy adres email został wpisany poprawnie </p>}
+      </div>
       <textarea
         name="textArea"
         className="project-summery2"
         value={projectInfo}
-      />
-      {status === "SUCCESS" ? <p className="feedback-inf">Dziękujemy za przesłanie projektu &#9786;</p> : <button className="submit-project">Przesyłam swój projekt i proszę o kontakt</button>}
-      {status === "ERROR" && <p> Ups! Coś poszło nie tak &#9785; </p>}
+      />      
     </form>
   );
 };

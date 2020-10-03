@@ -1,0 +1,11 @@
+.portfolio {
+  // @include flex-center;
+  .photo-album {
+    max-width: 1400px;
+    @include flex-center;
+    flex-wrap: wrap;
+    li {
+      margin: 5px
+    }
+  }
+}
