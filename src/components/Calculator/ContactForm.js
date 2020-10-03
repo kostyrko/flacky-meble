@@ -4,13 +4,14 @@ const ContactForm = ({data}) => {
   const [addInfo, setAddInfo] = useState("");
   const [projectInfo, setProjectInfo] = useState("");
   const [status, setStatus] = useState("");
+  const [email, setEmail] = useState("");
+  const [errors, setErrors] = useState([]);
 
   useEffect(() => {
     let temp = []
     Object.keys(data).forEach(elem=> {
-      // console.log('cotact elem', elem);
       const {num,price,lining,dimensions,upperUnits,lowerUnits} = data[elem]
-      console.log('log elem', num,price,lining,dimensions,upperUnits,lowerUnits);
+      // console.log('log elem', num,price,lining,dimensions,upperUnits,lowerUnits);
       let upper = []
       let lower = []
       if(upperUnits) {
@@ -49,36 +50,51 @@ wymiary ściany - długość ${dimensions.width}, wysokość ${dimensions.height
 
   const submitForm=(e)=> {
     e.preventDefault();
-    console.log('submitted')
-    const form = e.target;
-    console.log(form);
-    const data = new FormData(form);
-    const xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        form.reset();
-        setStatus({ status: "SUCCESS" });
-      } else {
-        setStatus({ status: "ERROR" });
-      }
-    };
-    xhr.send(data);
+    console.log('clicked')
+    if (email.length < 6 || email.indexOf('@') === -1) {
+      setErrors([...errors, 'Email musi być podany mieć przynajmniej 7 znaków i posiadać -> @'])}
+    else {
+      // empty errors Arr
+      setErrors([])
+      const form = e.target;
+      console.log(form);
+      const data = new FormData(form);
+      const xhr = new XMLHttpRequest();
+      xhr.open(form.method, form.action);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          form.reset();
+          setStatus("SUCCESS");
+        } else {
+          setStatus("ERROR");
+        }
+      };
+      xhr.send(data);
+    }
+    
   }
-  // console.log('status', status);
+
   return (
     <form
       onSubmit={submitForm}
       action="https://formspree.io/mwkwpbjl"
       method="POST"
     > 
-      
+      <div className="validation">
+        {
+          errors.length > 0 &&
+          errors.map((elem,i)=>
+            <p key={i}>{elem}</p>
+          )
+        }
+      </div>
       <label>Email:</label>
-      <input type="email" name="email" />
+      <input type="email" name="email" value={email}
+        onChange={(e) => setEmail(e.target.value)}/>
         
-      <label htmlFor="textArea">Proszę wpisać dodatkowe uwagi</label>
+      <label htmlFor="textArea">Tu można wpisać dodatkowe uwagi lub dane kontaktowe</label>
       <textarea
         name="textArea"
         className="project-summery"
@@ -88,12 +104,10 @@ wymiary ściany - długość ${dimensions.width}, wysokość ${dimensions.height
       <textarea
         name="textArea"
         className="project-summery2"
-        defaultValue={projectInfo}
-        // onChange={(e) => setAddInfo(e.target.value)}
-        
+        value={projectInfo}
       />
-      {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
-      {status === "ERROR" && <p>Ooops! There was an error.</p>}
+      {status === "SUCCESS" ? <p className="feedback-inf">Dziękujemy za przesłanie projektu &#9786;</p> : <button className="submit-project">Przesyłam swój projekt i proszę o kontakt</button>}
+      {status === "ERROR" && <p> Ups! Coś poszło nie tak &#9785; </p>}
     </form>
   );
 };
