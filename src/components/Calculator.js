@@ -34,7 +34,7 @@ const Calculator = () => {
 
 
   return (
-    <div className="calculator-section">
+    <main className="calculator-section">
       <div className="container">
         <div className="calculator-info">
           <h2>Zaprojektuj swoją kuchnię</h2>
@@ -76,7 +76,7 @@ const Calculator = () => {
           </>
         }
       </div>
-    </div>
+    </main>
   );
 };
 

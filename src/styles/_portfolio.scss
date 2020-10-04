@@ -1,11 +1,53 @@
 .portfolio {
   // @include flex-center;
+  h2,h3 {
+    // width: 100%;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 1.65rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    background-color: $main-red-trans-2;
+    margin-bottom: 10px;
+    // border-bottom: 1px solid $graphite;
+  }
+  .albums-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .photo-album {
+    max-width: 90vw;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  .photo-album:nth-child(odd)  {
+    background-color: $main-gray-trans-2;
+    margin-top: 25px;
+  }
+  .photo-album:nth-child(even)  {
+    background-color: $main-gray-trans-3;
+    margin-top: 25px;
+  }
+  .photo-list {
     max-width: 1400px;
     @include flex-center;
     flex-wrap: wrap;
     li {
       margin: 5px
+    }
+  }
+}
+
+@media only screen and (max-width: 782px)  {
+  .photo-list {
+    img {
+      max-width: 320px;
+      max-height: 420px;
     }
   }
 }

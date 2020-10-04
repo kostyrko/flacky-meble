@@ -7,16 +7,26 @@ import UnitsList from "./UnitsList";
 export const Wall = ({ num, handleConfirmation }) => {
   // * handle wall dimensions
   const [dimensions, setDimensions] = useState({
-    width: 400,
+    width: 350,
     height: 250,
   });
 
   const { width, height } = dimensions;
 
-  const wallStyle = {
+  let wallStyle = {
     backgroundColor: "lightgray",
     ...dimensions,
   };
+
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 400px)").matches) {
+      console.log("matches");
+      setDimensions({
+        height: 250,
+        width: 250,
+      });
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,9 +38,15 @@ export const Wall = ({ num, handleConfirmation }) => {
   };
 
   const handleClick = (e) => {
-    console.log('clicked');
+    console.log("clicked");
     e.preventDefault();
-    handleConfirmation(customKitchenUnits, priceWithLining,lining, num, dimensions);
+    handleConfirmation(
+      customKitchenUnits,
+      priceWithLining,
+      lining,
+      num,
+      dimensions
+    );
   };
 
   // * variables and state to handle selection of units => SelectOption component
@@ -40,9 +56,7 @@ export const Wall = ({ num, handleConfirmation }) => {
 
   const [price, setPrice] = useState(0);
   const [priceWithLining, setPriceWithLining] = useState(0);
-  const [lining, setLining] = useState('lakier')
-
-  
+  const [lining, setLining] = useState("lakier");
 
   const addNewUnit = (newUnit) => {
     const { type, typeOfUnits } = newUnit;
@@ -62,23 +76,23 @@ export const Wall = ({ num, handleConfirmation }) => {
 
   const getPrice = () => {
     let temp = [];
-      // * get prices of all items
-      Object.keys(customKitchenUnits).forEach((elem1) =>
-        Object.keys(customKitchenUnits[elem1]).forEach((elem2) =>
-          temp.push(customKitchenUnits[elem1][elem2].price)
-        )
-      );
-      let temp2 = temp.reduce((elem, acc) => elem + acc, 0);
-      setPrice(temp2);
-      // console.log('price',price);
-  }
+    // * get prices of all items
+    Object.keys(customKitchenUnits).forEach((elem1) =>
+      Object.keys(customKitchenUnits[elem1]).forEach((elem2) =>
+        temp.push(customKitchenUnits[elem1][elem2].price)
+      )
+    );
+    let temp2 = temp.reduce((elem, acc) => elem + acc, 0);
+    setPrice(temp2);
+    // console.log('price',price);
+  };
 
   const handleRadioInput = (e) => {
     const { value } = e.target;
-    console.log('value handleRadioInput:',value)
-    setLining(value)
+    console.log("value handleRadioInput:", value);
+    setLining(value);
   };
-  
+
   const priceSummery = () => {
     // console.log('lining priceSummery:',lining);
     let temp;
@@ -91,22 +105,20 @@ export const Wall = ({ num, handleConfirmation }) => {
     if (lining === "melamina") {
       temp = 75;
     }
-    const newPrice = price+temp
+    const newPrice = price + temp;
     // console.log('price priceSummery:',price)
-    setPriceWithLining(newPrice)
+    setPriceWithLining(newPrice);
     // console.log(priceWithLining);
-  }
-  
+  };
+
   // every time customKitchenUnits change get new price
   useEffect(() => {
-      getPrice()
-  }, [customKitchenUnits]);
+    getPrice();
+  }, [customKitchenUnits, getPrice]);
 
   useEffect(() => {
-    priceSummery()
-}, [price, lining]);
-
-
+    priceSummery();
+  }, [price, lining, priceSummery]);
 
   // * variables and state to handle change in SELECTED units => SelectedUnits component
   const handleInput = (e) => {
@@ -124,8 +136,6 @@ export const Wall = ({ num, handleConfirmation }) => {
     });
   };
 
-  
-
   // delete item from customKitchenUnits
   const handleDelete = (e) => {
     const { dataset, name } = e.target;
@@ -141,19 +151,26 @@ export const Wall = ({ num, handleConfirmation }) => {
     name: "lining",
     onChange: handleRadioInput,
   };
-  
+
   return (
     <div className="wall-container">
-      <h2>Ściana nr {num}</h2>
+      <h3>Ściana nr {num}</h3>
       <p>proszę wpisać wymiary (w cm)</p>
       <label htmlFor="width">Szerokość ściany w cm</label>
-      <input name="width" type="number" value={width} onChange={handleChange} />
+      <input
+        name="width"
+        type="number"
+        value={width}
+        onChange={handleChange}
+        className="cm-input"
+      />
       <label htmlFor="height">Wysokość ściany w cm</label>
       <input
         name="height"
         type="number"
         value={height}
         onChange={handleChange}
+        className="cm-input"
       />
       <div className="walls-drawing">
         <div className="wall" style={wallStyle}>
@@ -180,7 +197,7 @@ export const Wall = ({ num, handleConfirmation }) => {
           <input {...radioButton} value="fornir" id="fornir" /> Fornir
           <input {...radioButton} value="melamina" id="melamina" /> Melamina
         </div>
-        <button className="btn-1 confirm" onClick={e => handleClick(e)}>
+        <button className="btn-1 confirm" onClick={(e) => handleClick(e)}>
           Zatwierdzam wybór
         </button>
       </div>

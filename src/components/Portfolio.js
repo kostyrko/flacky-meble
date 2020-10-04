@@ -27,17 +27,18 @@ const Portfolio = () => {
     })
   }, []);
 
-  // console.log(albums);
   return (
-    <div className="portfolio-container">
-      <h1>Zrealizowane przez nas projekty</h1>
-      <div className="albums-container">
-      {albums.length > 0 ? albums.map(elem=> {
-        return <PhotoAlbum key={elem.id} albumId={elem}/> 
-        }
-      ) : null}
+    <main className="portfolio">
+      <div className="portfolio-container">
+        <h2>Zrealizowane przez nas projekty</h2>
+        <div className="albums-container">
+        {albums.length > 0 ? albums.map(elem=> {
+          return <PhotoAlbum key={elem.id} albumId={elem}/> 
+          }
+        ) : null}
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
 

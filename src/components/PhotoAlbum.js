@@ -26,7 +26,7 @@ const PhotoAlbum = ({albumId}) => {
 
   return (
     <div className="photo-album">
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <ul className="photo-list">
         {photsUrls.map((elem,i)=>
           <li key={i}>
