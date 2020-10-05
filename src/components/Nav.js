@@ -8,12 +8,12 @@ const Nav = ({location}) => {
 
   // console.log(location);
   return (
-    <nav className={location.pathname==='/' || location.pathname==='/flacky-meble' ? "home": 'main-nav'}>
+    <nav className={location.pathname==='/' || location.pathname==='/flacky-meble/' ? "home": 'main-nav'}>
       <div className="container">
         <div className="logo-container">
           <h1 className="logo">
-            <NavLink exact to='/flacky-meble'> <span className="name-1">Flacky</span>
-            <span className="name-2"> combination</span>
+            <NavLink exact to='/flacky-meble/'> <span className="name-1">FLACKY</span>
+            <span className="name-2"> COMBINATION MEBLE</span>
             <p className="logo-desc"> <span>MEBLE na MIARĘ</span> Twoich potrzeb</p>
             </NavLink>
           </h1>
