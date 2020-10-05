@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d0c5e573dbfa65afce69d08b18f3195",
+    "revision": "a67f65493a99a7a9a4a07f0af0dee495",
     "url": "/flacky-meble/index.html"
   },
   {
-    "revision": "22e5d7f71ec927110b3c",
+    "revision": "c3466d6e7fdf225478d9",
     "url": "/flacky-meble/static/css/main.5ff0cc18.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flacky-meble/static/js/2.f07ef853.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "22e5d7f71ec927110b3c",
-    "url": "/flacky-meble/static/js/main.1e2df5ad.chunk.js"
+    "revision": "c3466d6e7fdf225478d9",
+    "url": "/flacky-meble/static/js/main.c25ec71e.chunk.js"
   },
   {
     "revision": "c85da60df4253b79c8b5",
