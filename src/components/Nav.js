@@ -8,11 +8,11 @@ const Nav = ({location}) => {
 
   // console.log(location);
   return (
-    <nav className={location.pathname==='/' ? "home": 'main-nav'}>
+    <nav className={location.pathname==='/' || location.pathname==='/flacky-meble' ? "home": 'main-nav'}>
       <div className="container">
         <div className="logo-container">
           <h1 className="logo">
-            <NavLink exact to='/'> <span className="name-1">Flacky</span>
+            <NavLink exact to='/flacky-meble'> <span className="name-1">Flacky</span>
             <span className="name-2"> combination</span>
             <p className="logo-desc"> <span>MEBLE na MIARĘ</span> Twoich potrzeb</p>
             </NavLink>
