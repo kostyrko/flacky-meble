@@ -1,8 +1,13 @@
 nav {
   z-index: 10;
   a {
-    color: white;
+    color: $nav-gray-1;
     text-decoration: none;
+    &:hover {
+      height: 100%;
+      color: white;
+      border-bottom: 1px solid white;
+    }
   }
   #toggle {
     display: none;
@@ -233,7 +238,7 @@ nav {
 
 .main-nav {
   // border: 1px solid blue;
-  background-color: black;
+  background-color: $nav-gray-2;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -249,9 +254,10 @@ nav {
     align-items: center;
   }
   .logo a {
-    font-size: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
     margin-left: 5vw;
-    color: white;
+    color: $nav-gray-1;
   }
   .logo-desc {
     display: none;
@@ -281,6 +287,7 @@ nav {
     font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: 600;
+    padding-bottom: 10px;
   }
 }
 
@@ -291,14 +298,14 @@ nav {
       justify-content: space-between;
     }
     .logo-container {
-      background-color: black;
+      background-color: $nav-gray-2;
       width: 100vw;
       z-index: 10;
       position: relative;
     }
     .logo a {
       margin-left: 20px;
-      color: red;
+      color: $nav-gray-1;
       font-size: 1.5rem;
     }
     .menu {
@@ -311,7 +318,7 @@ nav {
       transition: all 0.5s ease;
       overflow: hidden;
       // z-index: -1;
-      background-color: black;
+      background-color: $nav-gray-2;
       display: block;
     }
     .nav-item {
@@ -353,7 +360,7 @@ nav {
     .menu-btn__burger,
     .menu-btn__burger::before,
     .menu-btn__burger::after {
-      background: gray;
+      background: $nav-gray-1;
     }
     
     .menu-btn__burger::before,

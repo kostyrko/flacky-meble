@@ -1,13 +1,3 @@
-// .services {
-//   // background-color: red;
-//   height: 100vh;
-//   @include flex-center;
-//   .container {
-//     width: 1200px;
-//     border: 1 solid black;
-//     font-size: 1.5rem;
-//   }
-// }
 
 .services-section {
   min-height: 100vh;
@@ -51,7 +41,7 @@
     border-radius: 15px;
   }
   .about-photo-1 {
-    min-height: 250px; 
+    min-height: 300px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -72,7 +62,7 @@
 @media only screen and (min-width: 782px) and (min-width: 550px)  {
   .services-section {
     .container {
-      height: 100%;
+      height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
