@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 const DrawUnit = ({info,handleInput, handleDelete, elem}) => {
   // const {id,width,height,name, typeOfUnits} = info
@@ -21,14 +23,16 @@ const DrawUnit = ({info,handleInput, handleDelete, elem}) => {
 
   return (
     <div className={typeOfUnits} style={unitStyle}>
-      <h3>Nazwa {name}</h3>
-      <p>nr: {id}</p>
-      <p>Cena {price}</p>
-      <p>Wysokość {height} cm</p>
-      <p>Szerokość {width} cm</p>
+      <h3>{name}/{id}</h3>
+      {/* <p>nr: {id}</p> */}
+      <p>{price} PLN</p>
+      {/* <p>Wysokość {height} cm</p> */}
+      <p>Szer. {width} cm</p>
       <input type="number" data-type={typeOfUnits} value={width} name={elem} onChange={handleInput}/>
       
-      <button  name={elem} data-type={typeOfUnits} onClick={e=>handleClick(e)}className="btn-2 btn-3">Usuń</button>
+      <button  name={elem} data-type={typeOfUnits} onClick={e=>handleClick(e)}className="trash"> 
+        <FontAwesomeIcon icon={faTrashAlt} />
+      </button>
     </div>
   );
 }
