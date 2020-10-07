@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/flacky-meble/precache-manifest.35a05f3760c9117a23e3d848cc93997a.js"
+  "/flacky-meble/precache-manifest.786ff10840d2299ce2e7456bdde5be1c.js"
 );
 
 self.addEventListener('message', (event) => {
