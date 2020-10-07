@@ -13,8 +13,8 @@ import Footer from './Footer'
 
 const Main = () => {
   return (
-    // <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    {/* <BrowserRouter> */}
         <NavWithRouter/>
         <Switch>
           <Route exact path='/uslugi' component={Services}/>
@@ -22,7 +22,7 @@ const Main = () => {
           <Route exact path='/kalkulator' component={Calculator}/>
           <Route exact path='/onas' component={About}/>
           <Route exact path='/kontakt' component={Contact}/>
-          {/* <Route component={process.env.PUBLIC_URL ? undefined:NotFound}/> */}
+          <Route component={process.env.PUBLIC_URL ? undefined:NotFound}/>
         </Switch>
         <Footer/>
     </BrowserRouter>

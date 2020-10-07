@@ -28,11 +28,15 @@ const DrawUnit = ({info,handleInput, handleDelete, elem}) => {
       <p>{price} PLN</p>
       {/* <p>Wysokość {height} cm</p> */}
       <p>Szer. {width} cm</p>
-      <input type="number" data-type={typeOfUnits} value={width} name={elem} onChange={handleInput}/>
+      <div className="user-input">
+        <input type="number" data-type={typeOfUnits} value={width} name={elem} onChange={handleInput}/>
+        
+        <button  name={elem} data-type={typeOfUnits} onClick={e=>handleClick(e)}className="trash"> 
+          <FontAwesomeIcon icon={faTrashAlt} />
+        </button>
+      </div>
       
-      <button  name={elem} data-type={typeOfUnits} onClick={e=>handleClick(e)}className="trash"> 
-        <FontAwesomeIcon icon={faTrashAlt} />
-      </button>
+
     </div>
   );
 }

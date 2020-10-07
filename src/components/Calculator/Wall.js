@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { kitchenUnits } from "./db";
 import KitchenUnits from "./KitchenUnits";
 import DrawUnit from "./DrawUnit";
-import UnitsList from "./UnitsList";
+// import UnitsList from "./UnitsList";
 
 export const Wall = ({ num, handleConfirmation }) => {
   // * handle wall dimensions
   const [dimensions, setDimensions] = useState({
-    width: 350,
+    width: 450,
     height: 250,
   });
 
@@ -202,7 +202,7 @@ export const Wall = ({ num, handleConfirmation }) => {
         </button>
       </div>
 
-      <ul className="upperUnits">
+      {/* <ul className="upperUnits">
         <UnitsList
           type={upperUnits}
           handleInput={handleInput}
@@ -215,7 +215,7 @@ export const Wall = ({ num, handleConfirmation }) => {
           handleInput={handleInput}
           handleDelete={handleDelete}
         />
-      </ul>
+      </ul> */}
 
       <KitchenUnits addNewUnit={addNewUnit} kitchenUnits={kitchenUnits} />
     </div>
