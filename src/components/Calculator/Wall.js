@@ -177,13 +177,13 @@ export const Wall = ({ num, handleConfirmation }) => {
           <div className="upperUnitsDrawing">
             {upperUnits &&
               Object.keys(upperUnits).map((elem) => (
-                <DrawUnit key={elem} info={upperUnits[elem]} />
+                <DrawUnit key={elem} info={upperUnits[elem]} handleInput={handleInput} handleDelete={handleDelete} elem={elem} />
               ))}
           </div>
           <div className="lowerUnitsDrawing">
             {lowerUnits &&
               Object.keys(lowerUnits).map((elem) => (
-                <DrawUnit key={elem} info={lowerUnits[elem]} />
+                <DrawUnit key={elem} info={lowerUnits[elem]} handleInput={handleInput} handleDelete={handleDelete} elem={elem} />
               ))}
           </div>
         </div>

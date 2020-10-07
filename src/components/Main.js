@@ -11,9 +11,9 @@ import {NavWithRouter} from './Nav'
 import Footer from './Footer'
 
 
-
 const Main = () => {
   return (
+    // <BrowserRouter basename={process.env.PUBLIC_URL}>
     <BrowserRouter>
         <NavWithRouter/>
         <Switch>
@@ -22,7 +22,7 @@ const Main = () => {
           <Route exact path='/kalkulator' component={Calculator}/>
           <Route exact path='/onas' component={About}/>
           <Route exact path='/kontakt' component={Contact}/>
-          <Route component={NotFound}/>
+          {/* <Route component={process.env.PUBLIC_URL ? undefined:NotFound}/> */}
         </Switch>
         <Footer/>
     </BrowserRouter>
