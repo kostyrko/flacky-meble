@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/flacky-meble/static/css/main.5ff0cc18.chunk.css",
-    "main.js": "/flacky-meble/static/js/main.c25ec71e.chunk.js",
-    "main.js.map": "/flacky-meble/static/js/main.c25ec71e.chunk.js.map",
+    "main.js": "/flacky-meble/static/js/main.89f3e4c5.chunk.js",
+    "main.js.map": "/flacky-meble/static/js/main.89f3e4c5.chunk.js.map",
     "runtime-main.js": "/flacky-meble/static/js/runtime-main.bc132d74.js",
     "runtime-main.js.map": "/flacky-meble/static/js/runtime-main.bc132d74.js.map",
     "static/js/2.f07ef853.chunk.js": "/flacky-meble/static/js/2.f07ef853.chunk.js",
     "static/js/2.f07ef853.chunk.js.map": "/flacky-meble/static/js/2.f07ef853.chunk.js.map",
     "index.html": "/flacky-meble/index.html",
-    "precache-manifest.cd7873a8db14c68fd2d92b4c9e963f18.js": "/flacky-meble/precache-manifest.cd7873a8db14c68fd2d92b4c9e963f18.js",
+    "precache-manifest.3cfb185945f95d9849ab01c17b4089c1.js": "/flacky-meble/precache-manifest.3cfb185945f95d9849ab01c17b4089c1.js",
     "service-worker.js": "/flacky-meble/service-worker.js",
     "static/css/main.5ff0cc18.chunk.css.map": "/flacky-meble/static/css/main.5ff0cc18.chunk.css.map",
     "static/js/2.f07ef853.chunk.js.LICENSE.txt": "/flacky-meble/static/js/2.f07ef853.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bc132d74.js",
     "static/js/2.f07ef853.chunk.js",
     "static/css/main.5ff0cc18.chunk.css",
-    "static/js/main.c25ec71e.chunk.js"
+    "static/js/main.89f3e4c5.chunk.js"
   ]
 }
