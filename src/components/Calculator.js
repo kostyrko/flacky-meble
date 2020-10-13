@@ -6,7 +6,7 @@ import ContactForm from "./Calculator/ContactForm.js";
 
 const Calculator = () => {
   // number of walls
-  const [wallNum, setWallNum] = useState(0);
+  const [wallNum, setWallNum] = useState(1);
   const [project, setProject] = useState({});
 
   // set num of walls -> wallNum
@@ -38,10 +38,10 @@ const Calculator = () => {
       <div className="container">
         <div className="calculator-info">
           <h2>Zaprojektuj swoją kuchnię</h2>
-          <p>W tym miejscu możesz stworzyć projekt swojej kuchni, poznać jego wstępną wycenę oraz wysłać go do nas, a my się z Tobą skontaktujemy w celu realizacji Twojego pomysłu</p>
-          <p>Projekt powstanie na podstawie zaproponowanego przez nas zestawu szafek wiszących oraz stojących. Możesz dopasować ich szerokość oraz wybrać odpowiedni dla Ciebie front (lakier,fornir, melamina), w cenie szafki wliczony jest uchwyt (spośród 40 do wyboru na późniejszym etapie realizacji projektu) </p>
+          {/* <p>W tym miejscu możesz stworzyć projekt swojej kuchni, poznać jego wstępną wycenę oraz wysłać go do nas, a my się z Tobą skontaktujemy w celu realizacji Twojego pomysłu</p>
+          <p>Projekt powstanie na podstawie zaproponowanego przez nas zestawu szafek wiszących oraz stojących. Możesz dopasować ich szerokość oraz wybrać odpowiedni dla Ciebie front (lakier,fornir, melamina), w cenie szafki wliczony jest uchwyt (spośród 40 do wyboru na późniejszym etapie realizacji projektu) </p> */}
           <div>
-            <p>Postępuj zgodnie z poniższymi krokami działania</p>
+            {/* <p>Postępuj zgodnie z poniższymi krokami działania</p> */}
             <ol className="instruction-list">
               <li className="instruction-elem"> Wybierz ilości ścian (powierzchni), które mają zostać zabudowane (dostosuje jej wielkość) </li>
               <li className="instruction-elem">
