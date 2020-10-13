@@ -11,6 +11,11 @@ export const Wall = ({ num, handleConfirmation }) => {
     height: 250,
   });
 
+  const [zoom, setZoom] = useState({
+    transform: `translate(1.5)`,
+    margin: `150px 0`
+  })
+
   const { width, height } = dimensions;
 
   let wallStyle = {
@@ -155,6 +160,7 @@ export const Wall = ({ num, handleConfirmation }) => {
   return (
     <div className="wall-container">
       <h3>Ściana nr {num}</h3>
+      <KitchenUnits addNewUnit={addNewUnit} kitchenUnits={kitchenUnits} />
       <p>proszę wpisać wymiary (w cm)</p>
       <label htmlFor="width">Szerokość ściany w cm</label>
       <input
@@ -217,7 +223,7 @@ export const Wall = ({ num, handleConfirmation }) => {
         />
       </ul> */}
 
-      <KitchenUnits addNewUnit={addNewUnit} kitchenUnits={kitchenUnits} />
+      
     </div>
   );
 };
