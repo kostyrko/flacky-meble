@@ -1,0 +1,208 @@
+.calculator-section {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .calculator-info {
+    @include flex-center;
+    flex-direction: column;
+    max-width: 1200px;
+    padding: 25px;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.5rem
+  }
+  // p {
+  //   padding: 15px;
+  // }
+  .instruction-list {
+    list-style: inside decimal;
+    text-align: center;
+    font-weight: 600;
+    .instruction-elem {
+      padding: 10px;
+    }
+  }
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .project-form {
+    .walls-option {
+      margin: 2% 0;
+      text-align: center;
+      label {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+    }
+    border-top: 1px solid $main-gray;
+    width: 100%;
+    height: 100%;
+  }
+  // h3 {
+  //   font-weight: 600;
+  //   font-size: 1.15rem
+  // }
+}
+
+.options {
+  display: flex;
+}
+
+.project-summery {
+  height: 100px;
+  width: 90%;
+}
+
+.project-summery2 {
+  height: 400px;
+  width: 90%;
+}
+
+.wall-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .cm-input {
+    width: 100px;
+    margin: 10px;
+  }
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // margin: 10px;
+    .option {
+      margin: 10px;
+      border: 1px solid $main-gray-trans;
+    }
+    img {
+      height: 100px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+  }
+  li {
+    margin: 5px;
+    border: 1px solid black;
+    max-width: 200px;
+    input {
+      max-width: 100px;
+    }
+  }
+  .lowerUnits li {
+    background-color: rgba(173, 216, 230, 0.575);
+  }
+  .upperUnits li {
+    background-color: rgba(240, 128, 128, 0.507);
+  }
+  .wall {
+    position: relative;
+    margin: 70px 10px;
+    .upperUnitsDrawing, .lowerUnitsDrawing {
+      font-size: 0.75rem;
+      position: relative;
+      p {
+        padding: 2px;
+      }
+      input[type="number"] {
+        border: none;
+        background-color: $light-gray;
+        color: $main-red;
+        border-bottom: 1px solid $graphite;
+        -moz-appearance: textfield;
+        margin: 2px;
+        width: 25px;
+        text-align: center;
+      }
+      input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0
+      }
+      .trash {
+        border: none;
+        border-radius: 10px;
+        background-color:$nav-gray-1;
+      } 
+      .fa-trash-alt {
+        pointer-events: none;
+        color: $main-red;
+      }
+    }
+    // position: relative;
+    .upperUnitsDrawing {
+      position: absolute;
+      display: flex;
+      .upperUnits {
+        background-color:rgba(255, 0, 0, 0.2);
+      }
+    }
+    .lowerUnitsDrawing {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      .lowerUnits {
+        background-color: rgba(0, 0, 255, 0.2),
+      }
+    }
+  }
+  .upperUnitsDrawing .user-input {
+    position: absolute;
+    top:-60px;
+  }
+  .lowerUnitsDrawing .user-input {
+    position: absolute;
+    bottom:-60px;
+  }
+  .user-input {
+    // display: flex;
+    background-color: $main-gray-trans-2;
+    border-radius: 2px;
+    border: 1px solid $graphite;
+    input {
+      display: block;
+    }
+    button {
+      width: 100%;
+    }
+  }
+  .kitchen-units {
+    h4 {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 20px;
+      border-top: 2px solid $main-gray;
+      line-height: 3rem
+    }
+  }
+}
+
+// Contact form
+
+.contact-form {
+  .validation {
+    p {
+      margin: 5px 0;
+      // min-width: 50vw;
+      padding: 10px;
+      color: white;
+      background-color: $main-red;
+      border-radius: 25px;
+    }
+  }
+  .submit {
+    width: 100%;
+    @include flex-center;
+  }
+}

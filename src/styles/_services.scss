@@ -1,0 +1,89 @@
+
+.services-section {
+  min-height: 100vh;
+  .container {
+    padding:25px;
+    overflow: hidden;
+    h2 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.25rem;
+    }
+    h2,h3 {
+      padding: 10px 0;
+      font-weight: 600;
+    }
+  }
+  ul {
+    list-style: square;
+    list-style-position: inside;
+  }
+  ol {
+    list-style: decimal;
+  }
+  .text-info-1, .text-info-2 {
+    // height: 45vh;
+    display: flex;
+    padding: 35px;
+    line-height: 2rem;
+  }
+  .text-info-1 {
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+  }
+  .text-info-2 {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-photo-1, .about-photo-2 {
+    border-radius: 15px;
+  }
+  .about-photo-1 {
+    min-height: 300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://live.staticflickr.com/65535/50323792811_f318a5c827.jpg");
+  }
+  .about-photo-2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://live.staticflickr.com/65535/50324132581_590891a2e2.jpg");
+  }
+}
+
+@media only screen and (min-width: 782px) and (min-width: 550px)  {
+  .services-section {
+    .container {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "photo2 photo1";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "photo1 text1" "text2 photo2";
+    }
+    .text-info-1 {
+      grid-area: text1;
+    }
+    .text-info-2 {
+      grid-area: text2;
+    }
+    .about-photo-1 {
+      background-attachment: scroll;
+
+      grid-area: photo1;
+    }
+    .about-photo-2 {
+      grid-area: photo2;
+    }
+  }
+} 

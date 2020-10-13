@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+
+// font-family: 'Roboto', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+
+// font-family: 'News Cycle', sans-serif;
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  // border: 1px solid red;
+  // max-width: 200px;
+}
+
+button {
+  color: white;
+  margin: 5px 0;
+}
+
+.btn-1 {
+  padding: 5px 10px;
+  background-color: $graphite;
+  border-radius: $primary-radius;
+  box-shadow: rgb(77, 77, 77) 0px 1px 2px;
+  border: 2px solid $main-gray;
+
+  &:hover{
+    color: white;
+    background-color: $main-gray;
+    border: 2px solid $graphite;
+  }
+  &:focus{
+    border: 2px solid $graphite;
+  }
+  &:active {
+    box-shadow: inset rgb(77, 77, 77) 0px 1px 2px;
+  }
+}
+
+.btn-2 {
+  color: white;
+  padding: 10px 20px;
+  background-color: $main-red-trans;
+  border-radius: $primary-radius;
+  box-shadow: rgb(77, 77, 77) 0px 1px 2px;
+  border: 2px solid $main-red-trans;
+  &:hover{
+    color: white;
+    background-color: $main-red;
+    border: 2px solid $main-red;
+  }
+  &:focus{
+    border: 2px solid $graphite;
+  }
+  &:active {
+    box-shadow: inset rgb(77, 77, 77) 0px 1px 2px;
+  }
+}
+
+.btn-3 {
+  padding: 5px 10px;
+}

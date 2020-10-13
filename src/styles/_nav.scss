@@ -1,0 +1,400 @@
+nav {
+  z-index: 10;
+  a {
+    color: $nav-gray-1;
+    text-decoration: none;
+    &:hover {
+      height: 100%;
+      color: white;
+      border-bottom: 1px solid white;
+    }
+  }
+  #toggle {
+    display: none;
+  }
+  .logo {
+    // font-style:'News Cycle', sans-serif;
+    // font-size: 1rem;
+    .name {
+      color: $secondary-red;
+    }
+  }
+}
+
+
+// NAVIGATION on HOME page
+.home {
+  background-color:$light-gray;
+  height: 110vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://live.staticflickr.com/65535/50324132581_590891a2e2.jpg");
+  @include flex-center;
+  .container {
+    width: 100vw;
+  }
+  .logo-container {
+    height: 15%;
+    overflow: hidden;
+    .logo {
+      @include flex-center;
+      color: $main-gray;
+      position: absolute;
+      top: 0;
+      font-size: 1.25rem;
+      width: 100vw;
+      margin-bottom: 5%;
+      min-height: 80px;
+      text-align: center;
+      background-color: $main-black;
+
+      a {
+        margin: 10px;
+        padding: 10px 10px;
+        border-radius: 15px;
+        font-size: 1.75rem;
+        .name-1 {
+          font-size: 2rem;
+          font-weight: 600;
+          color: $main-red;
+        }
+      }
+      .name {
+        font-size: 2rem;
+      }
+    }
+    p.logo-desc {
+      display: none;
+    }
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+  .menu {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 10%;
+    .services, .calculator {
+      border: 1vh solid $main-red;
+    }
+    .about, .portfolio, .contact {
+      border: 1vh solid $main-gray;
+    }
+    .nav-item {
+      @include flex-center;
+      height: 2vh;
+      background-color: $main-black-trans;
+      border-radius: 25px;
+      padding: 5% 0;
+      width: 90%;
+      margin: 5px 0 5px 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      a {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 999px) {
+  .home {
+    &>.container {
+      max-width: 1100px;
+    }
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  .home {
+    &>.container {
+      max-width: 1400px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 992px) { 
+  .home {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: none;
+    &>.container {
+      height: 99vh;
+      overflow: hidden;
+      }
+      .logo-container {
+        margin: 5px 1%;
+        width: 96%;
+        border-radius: 25px;
+        height: 28vh;
+        grid-area: header;
+        border: 6px solid $main-red ;
+        position: relative;
+        .logo{
+          position: inherit;
+          height: 100%;
+          background-repeat: no-repeat;
+          // background-size: cover;
+          background-position: center;
+          background-image: url("https://github.com/kostyrko/flacky-meble/blob/dev/img/hanoi.jpg?raw=true");
+          .name-1, .name-2 {
+            display: none;
+          }
+          .logo-desc {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            position: absolute;
+            // right: 0;
+            // border: 1px solid $main-red;
+            color: $main-gray-trans;
+            span {
+              color: white;
+            }
+          }
+        }
+      }
+      .menu {
+        height: 69%;
+        margin: 1%;
+        margin-top: 0;
+        justify-content:start;
+        align-items: start;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5px 5px;
+        grid-template-areas: "services portfolio portfolio" "services  calculator contact" "services  about contact";
+        .nav-item {
+          width: 95%;
+          height: 95%;
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          &:hover {
+            a {
+              font-size: 1.85rem;
+            }
+          }
+          a {
+            color: black;
+            @include flex-center;
+            width: 100%;
+            text-align: center;
+            background-color: $main-gray-trans;
+            height: 60%;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+        .services, .calculator {
+          border: 8px solid $main-red ;
+        }
+        .about, .portfolio, .contact {
+          border: 5px solid $main-gray ;
+        }
+        .services {
+          grid-area: services;
+          background-image: url("https://live.staticflickr.com/65535/50324132581_590891a2e2.jpg");
+        }
+        .about {
+          grid-area: about;
+          height: 86%;
+          width: 96%;
+          margin-top: 5px;
+          background-image: url("https://live.staticflickr.com/65535/50323792811_f318a5c827.jpg");
+        }
+        .portfolio {
+          grid-area: portfolio;
+          width: 98%;
+          background-image: url("https://live.staticflickr.com/65535/50323455768_2c7f8e88c2.jpg");
+        }
+        .contact {
+          grid-area: contact;
+          width: 95%;
+          background-image: url("https://live.staticflickr.com/65535/50324039627_806c054efb.jpg");
+        }
+        .calculator {
+          grid-area: calculator;
+          background-image: url("https://live.staticflickr.com/65535/50324302302_99010173c3.jpg");
+        }
+      }
+      
+    }
+}
+
+
+// NAVIGATION on ALL PAGES except HOME
+
+.main-nav {
+  // border: 1px solid blue;
+  position: fixed;
+  top: 0;
+  background-color: $nav-gray-2;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo-container {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+  }
+  .logo a {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-left: 5vw;
+    color: $nav-gray-1;
+  }
+  .logo-desc {
+    display: none;
+  }
+
+  .nav {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    border-bottom: 1px solid #eaeaea;
+    // position: sticky;
+    // top: 0;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+  }
+  .nav-item ~ .nav-item {
+    margin-left: 20px;
+  }
+  .nav-item a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main-nav {
+    z-index: 10;
+    .container {
+      justify-content: space-between;
+    }
+    .logo-container {
+      background-color: $nav-gray-2;
+      width: 100vw;
+      z-index: 10;
+      position: relative;
+    }
+    .logo a {
+      margin-left: 20px;
+      color: $nav-gray-1;
+      font-size: 1rem;
+    }
+    .menu {
+      /* text-align: center; */
+      width: 100%;
+      top: 80px;
+      transition: 5s ease-in-out;
+      position: fixed;
+      top: -320px;
+      transition: all 0.5s ease;
+      overflow: hidden;
+      // z-index: -1;
+      background-color: $nav-gray-2;
+      display: block;
+    }
+    .nav-item {
+      margin-left: 15px;
+      a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        /* border-bottom: 1px solid #eaeaea; */
+        margin: 0;
+      }
+    }
+    input[type="checkbox"]:checked ~ .menu {
+      top: 50px;
+      position: absolute;
+      // z-index: -1;
+    }
+    /* ========= Hamburger Button ========== */
+    .menu-btn {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      position: relative;
+      width: 55px;
+      height: 50px;
+      cursor: pointer;
+      margin-right: 2vw;
+      z-index: 10;
+    }
+    
+    .menu-btn__burger {
+      width: 40px;
+      height: 4px;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+      align-self: center;
+    }
+    
+    .menu-btn__burger,
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+      background: $nav-gray-1;
+    }
+    
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 4px;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+    
+    .menu-btn__burger::before {
+      transform: translateY(-12px);
+    }
+    
+    .menu-btn__burger::after {
+      transform: translateY(12px);
+    }
+    
+    /* ========= Animate Hamburger Button ========== */
+    
+    input[type="checkbox"]:checked ~ label > .menu-btn > .menu-btn__burger {
+      background: transparent;
+      box-shadow: none;
+    }
+    #toggle:checked ~ label > .menu-btn > .menu-btn__burger::before {
+      transform: rotate(45deg);
+    }
+    input[type="checkbox"]:checked ~ label > .menu-btn > .menu-btn__burger::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
