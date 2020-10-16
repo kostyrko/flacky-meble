@@ -46,10 +46,6 @@
     width: 100%;
     height: 100%;
   }
-  // h3 {
-  //   font-weight: 600;
-  //   font-size: 1.15rem
-  // }
 }
 
 .options {
@@ -100,82 +96,14 @@
       max-width: 100px;
     }
   }
-  .lowerUnits li {
-    background-color: rgba(173, 216, 230, 0.575);
-  }
-  .upperUnits li {
-    background-color: rgba(240, 128, 128, 0.507);
-  }
-  .wall {
-    position: relative;
-    margin: 70px 10px;
-    .upperUnitsDrawing, .lowerUnitsDrawing {
-      font-size: 0.75rem;
-      position: relative;
-      p {
-        padding: 2px;
-      }
-      input[type="number"] {
-        border: none;
-        background-color: $light-gray;
-        color: $main-red;
-        border-bottom: 1px solid $graphite;
-        -moz-appearance: textfield;
-        margin: 2px;
-        width: 25px;
-        text-align: center;
-      }
-      input[type=number]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0
-      }
-      .trash {
-        border: none;
-        border-radius: 10px;
-        background-color:$nav-gray-1;
-      } 
-      .fa-trash-alt {
-        pointer-events: none;
-        color: $main-red;
-      }
-    }
-    // position: relative;
-    .upperUnitsDrawing {
-      position: absolute;
-      display: flex;
-      .upperUnits {
-        background-color:rgba(255, 0, 0, 0.2);
-      }
-    }
-    .lowerUnitsDrawing {
-      position: absolute;
-      bottom: 0;
-      display: flex;
-      .lowerUnits {
-        background-color: rgba(0, 0, 255, 0.2),
-      }
-    }
-  }
-  .upperUnitsDrawing .user-input {
-    position: absolute;
-    top:-60px;
-  }
-  .lowerUnitsDrawing .user-input {
-    position: absolute;
-    bottom:-60px;
-  }
-  .user-input {
-    // display: flex;
-    background-color: $main-gray-trans-2;
-    border-radius: 2px;
-    border: 1px solid $graphite;
-    input {
-      display: block;
-    }
-    button {
-      width: 100%;
-    }
-  }
+  // .lowerUnits li {
+  //   background-color: rgba(173, 216, 230, 0.575);
+  // }
+  // .upperUnits li {
+  //   background-color: rgba(240, 128, 128, 0.507);
+  // }
+  
+
   .kitchen-units {
     h4 {
       text-align: center;
@@ -206,3 +134,5 @@
     @include flex-center;
   }
 }
+
+@import "./calculator/walls_drawing";

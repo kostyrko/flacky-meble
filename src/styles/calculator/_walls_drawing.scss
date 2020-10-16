@@ -1,0 +1,99 @@
+.calculator-section {
+  .wall {
+    position: relative;
+    margin: 70px 10px;
+    .upperUnitsDrawing, .lowerUnitsDrawing {
+      font-size: 0.75rem;
+      position: relative;
+      p {
+        padding: 2px;
+      }
+      .user-input {
+        overflow: hidden;
+        &:hover {
+          .trash {
+            background-color: $light-gray;
+            cursor: pointer;
+          }
+          .fa-trash-alt {
+            color: $secondary-red;
+          }
+        }
+      }
+      input[type="number"] {
+        border: none;
+        background-color: $light-gray;
+        color: $main-red;
+        border-bottom: 1px solid $graphite;
+        -moz-appearance: textfield;
+        margin: 2px;
+        width: 30px;
+        text-align: center;
+      }
+      input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0
+      }
+      .trash {
+        width: 96%;
+        border: none;
+        border-radius: 5px;
+        background-color: $nav-gray-1;
+      }
+      .fa-trash-alt {
+        pointer-events: none;
+        color: $main-red;
+      }
+    }
+    .upperUnitsDrawing .user-input {
+      position: absolute;
+      top:-60px;
+    }
+    .lowerUnitsDrawing .user-input {
+      position: absolute;
+      bottom:-60px;
+    }
+    .user-input {
+      // display: flex;
+      background-color: $nav-gray-1;
+      border-radius: 2px;
+      border: 1px solid $graphite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      input {
+        display: block;
+      }
+      // button {
+      //   width: 100%;
+      // }
+    }
+    // position: relative;
+    .upperUnitsDrawing {
+      position: absolute;
+      display: flex;
+      .upperUnits {
+        background-color:rgba(255, 0, 0, 0.2);
+      }
+    }
+    .lowerUnitsDrawing {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      .lowerUnits {
+        background-color: rgba(0, 0, 255, 0.2),
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .calculator-section {
+    .walls-drawing {
+      margin: 50px 0;
+      border: 1px solid gray;
+      transform: scale(1.2)
+    }
+  }
+}

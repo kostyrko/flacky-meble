@@ -1,44 +1,53 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
-const DrawUnit = ({info,handleInput, handleDelete, elem}) => {
-  // const {id,width,height,name, typeOfUnits} = info
-  const {id, name, width, price, height, typeOfUnits} = info
+const DrawUnit = ({ info, handleInput, handleDelete, elem }) => {
+
+  const { id, name, width, price, height, typeOfUnits } = info;
 
   const dimensions = {
     width: width,
-    border: '1px solid black',
-    height: height
-  }
+    border: "1px solid black",
+    height: height,
+  };
 
   const unitStyle = {
-    ...dimensions
-  }
+    ...dimensions,
+  };
 
-  const handleClick = e=> {
-    e.preventDefault()
-    handleDelete(e)
-  }
+  const handleClick = (e) => {
+    e.preventDefault();
+    handleDelete(e);
+  };
 
   return (
     <div className={typeOfUnits} style={unitStyle}>
-      <h3>{name}/{id}</h3>
-      {/* <p>nr: {id}</p> */}
+      <h3>
+        {name}/{id}
+      </h3>
       <p>{price} PLN</p>
-      {/* <p>Wysokość {height} cm</p> */}
       <p>Szer. {width} cm</p>
       <div className="user-input">
-        <input type="number" data-type={typeOfUnits} value={width} name={elem} onChange={handleInput}/>
-        
-        <button  name={elem} data-type={typeOfUnits} onClick={e=>handleClick(e)}className="trash"> 
+        <input
+          type="number"
+          data-type={typeOfUnits}
+          value={width}
+          name={elem}
+          onChange={handleInput}
+        />
+
+        <button
+          name={elem}
+          data-type={typeOfUnits}
+          onClick={(e) => handleClick(e)}
+          className="trash"
+        >
           <FontAwesomeIcon icon={faTrashAlt} />
         </button>
       </div>
-      
-
     </div>
   );
-}
+};
 
 export default DrawUnit;

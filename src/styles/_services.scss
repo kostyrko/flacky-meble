@@ -2,7 +2,7 @@
 .services-section {
   min-height: 100vh;
   .container {
-    padding:25px;
+    padding: 0 25px;
     overflow: hidden;
     h2 {
       font-size: 1.5rem;
@@ -62,7 +62,7 @@
 @media only screen and (min-width: 782px) and (min-width: 550px)  {
   .services-section {
     .container {
-      height: 100vh;
+      padding: 25px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;

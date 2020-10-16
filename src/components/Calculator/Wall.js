@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { kitchenUnits } from "./db";
 import KitchenUnits from "./KitchenUnits";
 import DrawUnit from "./DrawUnit";
-// import UnitsList from "./UnitsList";
+
 
 export const Wall = ({ num, handleConfirmation }) => {
   // * handle wall dimensions
@@ -143,6 +143,7 @@ export const Wall = ({ num, handleConfirmation }) => {
 
   // delete item from customKitchenUnits
   const handleDelete = (e) => {
+    console.log(e.target);
     const { dataset, name } = e.target;
     let temp = { ...customKitchenUnits };
     delete temp[dataset.type][name];
@@ -199,7 +200,7 @@ export const Wall = ({ num, handleConfirmation }) => {
         <p>Suma: {priceWithLining}</p>
         <label htmlFor="lining-options">Rodzaj okładziny</label>
         <div name="lining-options" className="radio-form">
-          <input {...radioButton} value="lakier" id="lakier" /> Lakierowana
+          <input {...radioButton} value="lakier" id="lakier" defaultChecked /> Lakierowana
           <input {...radioButton} value="fornir" id="fornir" /> Fornir
           <input {...radioButton} value="melamina" id="melamina" /> Melamina
         </div>
@@ -207,23 +208,6 @@ export const Wall = ({ num, handleConfirmation }) => {
           Zatwierdzam wybór
         </button>
       </div>
-
-      {/* <ul className="upperUnits">
-        <UnitsList
-          type={upperUnits}
-          handleInput={handleInput}
-          handleDelete={handleDelete}
-        />
-      </ul>
-      <ul className="lowerUnits">
-        <UnitsList
-          type={lowerUnits}
-          handleInput={handleInput}
-          handleDelete={handleDelete}
-        />
-      </ul> */}
-
-      
     </div>
   );
 };

@@ -16,22 +16,21 @@ const Calculator = () => {
 
   let walls = Array.from(Array(wallNum), (e, i) => i + 1);
 
-  const handleConfirmation = (data, price, lining, num,dimensions) => {
+  const handleConfirmation = (data, price, lining, num, dimensions) => {
     // console.log('data',data);
     setProject({
       ...project,
-      ["wall"+num] : {
+      ["wall" + num]: {
         num: num,
         price: price,
         lining: lining,
-        dimensions : dimensions,
+        dimensions: dimensions,
         ...data,
-      }
-    })
-  }
+      },
+    });
+  };
   // console.log('project',Object.keys(project).length > 0);
   // console.log('project',project);
-
 
   return (
     <main className="calculator-section">
@@ -43,12 +42,16 @@ const Calculator = () => {
           <div>
             {/* <p>Postępuj zgodnie z poniższymi krokami działania</p> */}
             <ol className="instruction-list">
-              <li className="instruction-elem"> Wybierz ilości ścian (powierzchni), które mają zostać zabudowane (dostosuje jej wielkość) </li>
               <li className="instruction-elem">
-                Dobierz z listy interesujące Cię szafki 
+                {" "}
+                Wybierz ilości ścian (powierzchni), które mają zostać zabudowane
+                (dostosuje jej wielkość){" "}
+              </li>
+              <li className="instruction-elem">
+                Dobierz z listy interesujące Cię szafki
                 <span className="additional-info">
                   (lista pojawi się po wyborze liczby ścian do zabudowy)
-                </span> 
+                </span>
               </li>
               <li className="instruction-elem">
                 Dopasuj szerokość wybranych szafek
@@ -56,25 +59,32 @@ const Calculator = () => {
               <li className="instruction-elem">
                 Wybierz rodzaj pokrycia frontu
               </li>
+              <li className="instruction-elem">Zatwierdź wybór</li>
               <li className="instruction-elem">
-                Zatwierdź wybór
+                W dolnej części strony pojawi się wstępnie wypełniony formularz
+                z wprowadzonymi przez Ciebie danymi, które możesz do nas wysłać,
+                a my się z Tobą skontaktujemy
               </li>
-              <li className="instruction-elem">
-                W dolnej części strony pojawi się wstępnie wypełniony formularz  z wprowadzonymi przez Ciebie danymi, które możesz do nas wysłać, a my się z Tobą skontaktujemy
-              </li>
-            </ol> 
+            </ol>
           </div>
         </div>
         <form className="project-form">
           <WallsOption onChange={handleWallNumChange} />
-          {walls && walls.map((elem) => <Wall key={elem} num={elem} handleConfirmation={handleConfirmation} />)}
+          {walls &&
+            walls.map((elem) => (
+              <Wall
+                key={elem}
+                num={elem}
+                handleConfirmation={handleConfirmation}
+              />
+            ))}
         </form>
-        {Object.keys(project).length > 0 &&
+        {Object.keys(project).length > 0 && (
           <>
-            <Summery data={project}/>
-            <ContactForm data={project}/>
+            <Summery data={project} />
+            <ContactForm data={project} />
           </>
-        }
+        )}
       </div>
     </main>
   );

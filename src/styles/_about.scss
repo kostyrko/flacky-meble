@@ -1,7 +1,7 @@
 .about-section {
   min-height: 100vh;
   .container {
-    padding:25px;
+    padding: 0 25px;
     overflow: hidden;
   }
   .text-info-1, .text-info-2 {
@@ -9,7 +9,6 @@
     display: flex;
     padding: 35px;
     line-height: 2rem;
-    
   }
   .text-info-1 {
     font-weight: 600;
@@ -28,7 +27,6 @@
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -45,7 +43,7 @@
 @media only screen and (min-width: 782px) and (min-height: 550px)  {
   .about-section {
     .container {
-      height: 90vh;
+      padding: 25px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
