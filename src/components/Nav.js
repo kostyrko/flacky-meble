@@ -1,10 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 
 import { NavLink } from "react-router-dom";
 import { withRouter } from "react-router";
 
 
 const Nav = ({location}) => {
+  const [checkbox, setCheckbox] = useState(false)
+
+  const handleMenuClick = () => {
+    setCheckbox(false)
+  }
+
+  const handleBurgerClick = () => {
+    if(checkbox===false) {
+      setCheckbox(true)
+    }else {
+      setCheckbox(false)
+    }
+  }
 
   // console.log(location);
   return (
@@ -19,8 +32,8 @@ const Nav = ({location}) => {
           </h1>
         </div>
 
-        <input type="checkbox" name="hamburger-btn" id="toggle"/>
-        <label className="toggle" htmlFor="toggle">
+        <input type="checkbox" checked={checkbox} name="hamburger-btn" id="toggle"/>
+        <label className="toggle" htmlFor="toggle" onClick={handleBurgerClick}>
           <div className="menu-btn">
             <div className="menu-btn__burger"></div>
           </div>
@@ -28,19 +41,19 @@ const Nav = ({location}) => {
 
 
         <ul className="menu hamburger-nav">
-          <li className="nav-item services">
+          <li className="nav-item services" onClick={handleMenuClick}>
             <NavLink exact to='/uslugi'>Nasze usługi</NavLink>
           </li>
-          <li className="nav-item about">
+          <li className="nav-item about" onClick={handleMenuClick}>
             <NavLink exact to='/onas'>O nas</NavLink>
           </li>
-          <li className="nav-item portfolio">
+          <li className="nav-item portfolio" onClick={handleMenuClick}>
             <NavLink exact to='/projekty'>Zrealizowane projekty</NavLink>
           </li>
-          <li className="nav-item calculator">
+          <li className="nav-item calculator" onClick={handleMenuClick}>
             <NavLink exact to='/kalkulator'>Wycena projektu</NavLink>
           </li>
-          <li className="nav-item contact">
+          <li className="nav-item contact" onClick={handleMenuClick}>
             <NavLink exact to='/kontakt'>Kontakt</NavLink>
           </li>
         </ul>
