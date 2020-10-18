@@ -43,18 +43,14 @@ const Calculator = () => {
             {/* <p>Postępuj zgodnie z poniższymi krokami działania</p> */}
             <ol className="instruction-list">
               <li className="instruction-elem">
-                {" "}
                 Wybierz ilości ścian (powierzchni), które mają zostać zabudowane
-                (dostosuje jej wielkość){" "}
+                (dostosuje jej wielkość)
               </li>
               <li className="instruction-elem">
                 Dobierz z listy interesujące Cię szafki
-                <span className="additional-info">
-                  (lista pojawi się po wyborze liczby ścian do zabudowy)
-                </span>
               </li>
               <li className="instruction-elem">
-                Dopasuj szerokość wybranych szafek
+                Opcjonalnie: dopasuj szerokość wybranych szafek
               </li>
               <li className="instruction-elem">
                 Wybierz rodzaj pokrycia frontu

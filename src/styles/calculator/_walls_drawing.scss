@@ -1,7 +1,7 @@
 .calculator-section {
   .wall {
     position: relative;
-    margin: 70px 10px;
+    margin: 10px;
     .upperUnitsDrawing, .lowerUnitsDrawing {
       font-size: 0.75rem;
       position: relative;
@@ -78,12 +78,27 @@
     }
     .lowerUnitsDrawing {
       position: absolute;
-      bottom: 0;
+      bottom: 70px;
       display: flex;
       .lowerUnits {
         background-color: rgba(0, 0, 255, 0.2),
       }
     }
+  }
+  .wall-container {
+    min-width: 90vw;
+  }
+  .walls-drawing {
+    align-self: center;
+    @include flex-center;
+    border: 2px solid$nav-gray-1;
+    border-radius: 5px;
+  }
+  .walls-drawing__sketch {
+    margin: 70px 10px;
+  }
+  .kitchen-units {
+    width: 100%;
   }
 }
 
@@ -92,8 +107,32 @@
   .calculator-section {
     .walls-drawing {
       margin: 50px 0;
-      border: 1px solid gray;
       transform: scale(1.2)
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .wall-container {
+    min-width: 1000px;
+  }
+  .wall {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    .walls-drawing {
+      margin-left: 100px;
+    }
+    .kitchen-units {
+      width: 250px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .wall {
+    .kitchen-units {
+      width: 500px;
     }
   }
 }

@@ -11,10 +11,10 @@ export const Wall = ({ num, handleConfirmation }) => {
     height: 250,
   });
 
-  const [zoom, setZoom] = useState({
-    transform: `translate(1.5)`,
-    margin: `150px 0`
-  })
+  // const [zoom, setZoom] = useState({
+  //   transform: `translate(1.5)`,
+  //   margin: `150px 0`
+  // })
 
   const { width, height } = dimensions;
 
@@ -24,11 +24,11 @@ export const Wall = ({ num, handleConfirmation }) => {
   };
 
   useEffect(() => {
-    if (window.matchMedia("(max-width: 400px)").matches) {
+    if (window.matchMedia("(max-width: 450px)").matches) {
       console.log("matches");
       setDimensions({
         height: 250,
-        width: 250,
+        width: 300,
       });
     }
   }, []);
@@ -161,49 +161,53 @@ export const Wall = ({ num, handleConfirmation }) => {
   return (
     <div className="wall-container">
       <h3>Ściana nr {num}</h3>
-      <KitchenUnits addNewUnit={addNewUnit} kitchenUnits={kitchenUnits} />
-      <p>proszę wpisać wymiary (w cm)</p>
-      <label htmlFor="width">Szerokość ściany w cm</label>
-      <input
-        name="width"
-        type="number"
-        value={width}
-        onChange={handleChange}
-        className="cm-input"
-      />
-      <label htmlFor="height">Wysokość ściany w cm</label>
-      <input
-        name="height"
-        type="number"
-        value={height}
-        onChange={handleChange}
-        className="cm-input"
-      />
-      <div className="walls-drawing">
-        <div className="wall" style={wallStyle}>
-          <div className="upperUnitsDrawing">
-            {upperUnits &&
-              Object.keys(upperUnits).map((elem) => (
-                <DrawUnit key={elem} info={upperUnits[elem]} handleInput={handleInput} handleDelete={handleDelete} elem={elem} />
-              ))}
-          </div>
-          <div className="lowerUnitsDrawing">
-            {lowerUnits &&
-              Object.keys(lowerUnits).map((elem) => (
-                <DrawUnit key={elem} info={lowerUnits[elem]} handleInput={handleInput} handleDelete={handleDelete} elem={elem} />
-              ))}
+      <div className="wall">
+        <KitchenUnits addNewUnit={addNewUnit} kitchenUnits={kitchenUnits} />
+        <div className="walls-drawing">
+          <div className="walls-drawing__sketch" style={wallStyle}>
+            <div className="upperUnitsDrawing">
+              {upperUnits &&
+                Object.keys(upperUnits).map((elem) => (
+                  <DrawUnit key={elem} info={upperUnits[elem]} handleInput={handleInput} handleDelete={handleDelete} elem={elem} />
+                ))}
+            </div>
+            <div className="lowerUnitsDrawing">
+              {lowerUnits &&
+                Object.keys(lowerUnits).map((elem) => (
+                  <DrawUnit key={elem} info={lowerUnits[elem]} handleInput={handleInput} handleDelete={handleDelete} elem={elem} />
+                ))}
+            </div>
           </div>
         </div>
       </div>
-
+      
+      <div className="walls-input">
+        <p>Wymiary ściany (w cm)</p>
+        <label htmlFor="width">Szerokość</label>
+        <input
+          name="width"
+          type="number"
+          value={width}
+          onChange={handleChange}
+          className="cm-input"
+        />
+        <label htmlFor="height">Wysokość</label>
+        <input
+          name="height"
+          type="number"
+          value={height}
+          onChange={handleChange}
+          className="cm-input"
+        />
+      </div>
       <div className="summery">
-        <p>Suma: {priceWithLining}</p>
         <label htmlFor="lining-options">Rodzaj okładziny</label>
         <div name="lining-options" className="radio-form">
           <input {...radioButton} value="lakier" id="lakier" defaultChecked /> Lakierowana
           <input {...radioButton} value="fornir" id="fornir" /> Fornir
           <input {...radioButton} value="melamina" id="melamina" /> Melamina
         </div>
+        <p>Suma: {priceWithLining}</p>
         <button className="btn-1 confirm" onClick={(e) => handleClick(e)}>
           Zatwierdzam wybór
         </button>

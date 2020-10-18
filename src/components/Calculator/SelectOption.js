@@ -9,10 +9,10 @@ const SelectOption = ({addNewUnit, typeOfUnits, type, info}) => {
   }
   return (
     <div className="option">
-          <h3>Szafka {name}</h3>
-          <p>Cena wyjściowa: {price} pln</p>
+          <h5>Szafka {name}</h5>
+          <p>Cena początkowa: {price} pln</p>
           <p>Wysokość: {height} cm</p>
-          <p>Szerokość wyjściowa: {width} cm</p>
+          <p>Szerokość początkowa: {width} cm</p>
           <img src={src} alt={name}/>
           <button className="btn-1" onClick={e=>handleClick(e)}>Dodaj</button>
     </div>

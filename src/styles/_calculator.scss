@@ -66,23 +66,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  h3 {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: $main-gray;
+  }
   .cm-input {
     width: 100px;
     margin: 10px;
   }
-  .options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    // margin: 10px;
-    .option {
-      margin: 10px;
-      border: 1px solid $main-gray-trans;
-    }
-    img {
-      height: 100px;
-    }
-  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -94,24 +90,6 @@
     max-width: 200px;
     input {
       max-width: 100px;
-    }
-  }
-  // .lowerUnits li {
-  //   background-color: rgba(173, 216, 230, 0.575);
-  // }
-  // .upperUnits li {
-  //   background-color: rgba(240, 128, 128, 0.507);
-  // }
-  
-
-  .kitchen-units {
-    h4 {
-      text-align: center;
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-top: 20px;
-      border-top: 2px solid $main-gray;
-      line-height: 3rem
     }
   }
 }
@@ -136,3 +114,6 @@
 }
 
 @import "./calculator/walls_drawing";
+@import "./calculator/kitchen_units";
+@import "./calculator/walls_input";
+@import "./calculator/wall";

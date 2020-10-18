@@ -1,0 +1,37 @@
+.wall-container {
+  margin-top: 25px;
+  border-left: 2px solid $light-gray;
+  border-right: 2px solid $light-gray;
+  border-bottom: 2px solid $main-gray;
+  border-radius: 25px;
+  overflow: hidden;
+  .summery {
+    margin: 10px;
+    border: 2px solid $main-gray;
+    width: 95%;
+    @include flex-center;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    label {
+      background-color:$nav-gray-1;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    .radio-form {
+      margin: 10px 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    p {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: $main-red;
+    }
+    .confirm {
+      background-color:$secondary-red;
+    }
+  }
+}
+

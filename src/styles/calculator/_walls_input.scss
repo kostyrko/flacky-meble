@@ -1,0 +1,28 @@
+.calculator-section {
+  .walls-input{
+    border: 2px solid $main-gray;
+    width: 95%;
+    overflow: hidden;
+    @include flex-center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    p {
+      background-color:$nav-gray-1;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    input {
+      border-radius: 5px
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .walls-input {
+    flex-direction: column;
+    label:first-of-type{
+      margin-top: 10px;
+    }
+  }
+}

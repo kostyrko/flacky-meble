@@ -23,9 +23,9 @@ const DrawUnit = ({ info, handleInput, handleDelete, elem }) => {
 
   return (
     <div className={typeOfUnits} style={unitStyle}>
-      <h3>
+      <h5>
         {name}/{id}
-      </h3>
+      </h5>
       <p>{price} PLN</p>
       <p>Szer. {width} cm</p>
       <div className="user-input">
