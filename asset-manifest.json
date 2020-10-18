@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/flacky-meble/static/css/main.ad222b6c.chunk.css",
-    "main.js": "/flacky-meble/static/js/main.637acc48.chunk.js",
-    "main.js.map": "/flacky-meble/static/js/main.637acc48.chunk.js.map",
+    "main.css": "/flacky-meble/static/css/main.2e46e341.chunk.css",
+    "main.js": "/flacky-meble/static/js/main.a5b425a7.chunk.js",
+    "main.js.map": "/flacky-meble/static/js/main.a5b425a7.chunk.js.map",
     "runtime-main.js": "/flacky-meble/static/js/runtime-main.bc132d74.js",
     "runtime-main.js.map": "/flacky-meble/static/js/runtime-main.bc132d74.js.map",
     "static/js/2.294adb9d.chunk.js": "/flacky-meble/static/js/2.294adb9d.chunk.js",
     "static/js/2.294adb9d.chunk.js.map": "/flacky-meble/static/js/2.294adb9d.chunk.js.map",
     "index.html": "/flacky-meble/index.html",
-    "precache-manifest.80ff19097ca096340f77bbff2066a09b.js": "/flacky-meble/precache-manifest.80ff19097ca096340f77bbff2066a09b.js",
+    "precache-manifest.b1759bd28aba1c2efa95c1fc340b133d.js": "/flacky-meble/precache-manifest.b1759bd28aba1c2efa95c1fc340b133d.js",
     "service-worker.js": "/flacky-meble/service-worker.js",
-    "static/css/main.ad222b6c.chunk.css.map": "/flacky-meble/static/css/main.ad222b6c.chunk.css.map",
+    "static/css/main.2e46e341.chunk.css.map": "/flacky-meble/static/css/main.2e46e341.chunk.css.map",
     "static/js/2.294adb9d.chunk.js.LICENSE.txt": "/flacky-meble/static/js/2.294adb9d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bc132d74.js",
     "static/js/2.294adb9d.chunk.js",
-    "static/css/main.ad222b6c.chunk.css",
-    "static/js/main.637acc48.chunk.js"
+    "static/css/main.2e46e341.chunk.css",
+    "static/js/main.a5b425a7.chunk.js"
   ]
 }
