@@ -1,8 +1,7 @@
-
 .kitchen-units {
   height: 500px;
   width: 250px;
-  border: 3px solid $main-gray;
+  border: 2px solid $nav-gray-1;
   overflow: scroll;
   border-radius: 5px;
   overflow-x: hidden;
@@ -10,7 +9,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // margin: 10px;
     .option {
       margin: 10px;
       border: 2px solid $main-gray-trans;
@@ -21,7 +19,8 @@
       h5 {
         background-color: $nav-gray-1;
       }
-      h5, p {
+      h5,
+      p {
         padding: 2px;
         width: 100%;
         text-align: center;
@@ -47,14 +46,10 @@
     width: 100%;
     background-color: $nav-gray-1;
   }
-  // h4~h4 {
-  //   border-top: 2px solid $main-gray;
-  // }
 }
 
 @media only screen and (min-width: 1400px) {
   .kitchen-units {
-    // background-color: red;
     width: 500px;
   }
 }

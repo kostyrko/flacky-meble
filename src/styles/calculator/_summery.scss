@@ -1,0 +1,27 @@
+.summery-list {
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  border: 1px solid $secondary-red;
+  border-radius: $primary-radius;
+  margin-top: 25px;
+  overflow: clip;
+  // background-color: gray;
+  h4 {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background-color: $main-red-trans-2;
+  }
+  p>span {
+    font-weight: 600;
+    font-size: 1rem;
+    color: $secondary-red;
+  }
+  .price span, .lining span {
+    font-size: 1.25rem;
+  }
+  p, li {
+    padding: 5px;
+  }
+}

@@ -1,20 +1,20 @@
 .wall-container {
   margin-top: 25px;
-  border-left: 2px solid $light-gray;
-  border-right: 2px solid $light-gray;
-  border-bottom: 2px solid $main-gray;
+  border: 2px solid $light-gray;
   border-radius: 25px;
   overflow: hidden;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
   .summery {
     margin: 10px;
     border: 2px solid $main-gray;
     width: 95%;
+    max-width: 1200px;
     @include flex-center;
     flex-direction: column;
     border-radius: 5px;
     overflow: hidden;
     label {
-      background-color:$nav-gray-1;
+      background-color:$main-gray;
       padding: 10px;
       text-align: center;
       width: 100%;

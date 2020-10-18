@@ -37,9 +37,22 @@
     .walls-option {
       margin: 2% 0;
       text-align: center;
+      border: 2px solid $graphite;
+      padding: 25px;
+      border-radius: $primary-radius;
       label {
+        // padding: 25px;
         font-weight: 600;
         font-size: 1.2rem;
+        // width: 100%;
+        // display: block;
+        // background-color: $main-gray;
+      }
+      div {
+        padding: 10px;
+        input~input {
+          margin-left: 15px;
+        }
       }
     }
     border-top: 1px solid $main-gray;
@@ -57,10 +70,7 @@
   width: 90%;
 }
 
-.project-summery2 {
-  height: 400px;
-  width: 90%;
-}
+
 
 .wall-container {
   display: flex;
@@ -117,3 +127,5 @@
 @import "./calculator/kitchen_units";
 @import "./calculator/walls_input";
 @import "./calculator/wall";
+@import "./calculator/contact_form";
+@import "./calculator/summery";

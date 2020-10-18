@@ -64,16 +64,13 @@
       input {
         display: block;
       }
-      // button {
-      //   width: 100%;
-      // }
     }
-    // position: relative;
     .upperUnitsDrawing {
       position: absolute;
       display: flex;
       .upperUnits {
         background-color:rgba(255, 0, 0, 0.2);
+        box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.3);
       }
     }
     .lowerUnitsDrawing {
@@ -81,7 +78,8 @@
       bottom: 70px;
       display: flex;
       .lowerUnits {
-        background-color: rgba(0, 0, 255, 0.2),
+        background-color: rgba(0, 0, 255, 0.2);
+        box-shadow: 1px 8px 5px 0px rgba(0, 0, 0, 0.3);
       }
     }
   }
@@ -91,14 +89,22 @@
   .walls-drawing {
     align-self: center;
     @include flex-center;
-    border: 2px solid$nav-gray-1;
     border-radius: 5px;
   }
   .walls-drawing__sketch {
     margin: 70px 10px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+    h5 {
+      padding: 2px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    p {
+      margin: 4px 0;
+    }
   }
   .kitchen-units {
-    width: 100%;
+    width: 90%;
   }
 }
 

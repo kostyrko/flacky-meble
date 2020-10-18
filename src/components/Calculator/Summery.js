@@ -7,25 +7,25 @@ const Summery = ({data}) => {
       {Object.keys(data).map(elem=> {
         const {num,price,lining, upperUnits, lowerUnits, dimensions} = data[elem]
         return (
-          <div key={num}>
-            <h3>Ściana {num}</h3>
-            <p>Podane wymiary ściany szerokość: {dimensions.width} cm, wysokość {dimensions.height} cm </p>
-            <p> Łączna cena szafek na podstawie podanych danych {price} pln</p>
-            <p>rodzaj okładziny {lining}</p>
+          <div className="summery-list" key={num}>
+            <h4>Ściana {num}</h4>
+            <p className="dimensions">Długość: <span> {dimensions.width} cm </span>, wysokość: <span> {dimensions.height} cm </span></p>
+            <p className="price"> Łączna cena szafek na podstawie podanych danych  <span> {price} pln</span></p>
+            <p className="lining">rodzaj okładziny <span>{lining}</span></p>
             {
               <>
                 <ul className="upperUnits">
                 {upperUnits && 
                   Object.keys(upperUnits).map(elem=>
                   {const {type, width, price} = upperUnits[elem]
-                  return <li key={elem}> typ: {type} szerokość: {width} cena: {price}</li>}
+                  return <li key={elem}>{type}  - cena: {price} (szerokość: {width})</li>}
                   )}
                 </ul>
                 <ul className="lowerUnits">
                 {lowerUnits && 
                   Object.keys(lowerUnits).map(elem=>
                   {const {type, width, price} = lowerUnits[elem]
-                  return <li key={elem}> typ: {type} szerokość: {width} cena: {price}</li>}
+                  return <li key={elem}>{type}  - cena: {price} (szerokość: {width})</li>}
                   )}
                 </ul>
               </>

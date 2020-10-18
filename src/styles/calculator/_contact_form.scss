@@ -1,0 +1,35 @@
+.contact-form {
+  border: 1px solid $secondary-red;
+  margin: 25px;
+  padding: 25px;
+  border-radius: $primary-radius;
+  .project-summery {
+    height: 180px;
+    width: 100%;
+  }
+  .project-summery2 {
+    margin-top: 15px;
+    min-height: 400px;
+    width: 100%;
+  }
+  label {
+    padding: 15px 0 5px 0;
+    color: $graphite;
+    span {
+      color: $main-black;
+      font-weight: 600;
+    }
+  }
+  .submit-project {
+    margin-top: 15px;
+  }
+  input[type=email] {
+    border: 2px solid $secondary-red;
+    border-radius: $primary-radius;
+    padding: 10px;
+  }
+  textarea {
+    padding: 5px;
+    border-radius: $primary-radius;
+  }
+}

@@ -2,12 +2,13 @@
   .walls-input{
     border: 2px solid $main-gray;
     width: 95%;
+    max-width: 1200px;
     overflow: hidden;
     @include flex-center;
     flex-wrap: wrap;
     border-radius: 5px;
     p {
-      background-color:$nav-gray-1;
+      background-color:$main-gray;
       padding: 10px;
       text-align: center;
       width: 100%;
