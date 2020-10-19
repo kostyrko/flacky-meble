@@ -43,7 +43,7 @@ nav {
       top: 0;
       font-size: 1.25rem;
       width: 100vw;
-      margin-bottom: 5%;
+      // margin-bottom: 5%;
       min-height: 80px;
       text-align: center;
       background-color: $main-black;
@@ -145,28 +145,33 @@ nav {
       height: 28vh;
       grid-area: header;
       border: 6px solid $main-red;
-      position: relative;
+
       .logo {
         position: inherit;
         height: 100%;
+        width: 100%;
         background-repeat: no-repeat;
-        // background-size: cover;
-        background-position: center;
+
         background-image: url("https://github.com/kostyrko/flacky-meble/blob/dev/img/hanoi.jpg?raw=true");
+        position: relative;
         .name-1,
         .name-2 {
           display: none;
         }
+        .active {
+          position: absolute;
+          right: 60px;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
         .logo-desc {
           font-family: Arial, Helvetica, sans-serif;
           font-weight: 600;
-          font-size: 1.25rem;
-          position: absolute;
-          // right: 0;
-          // border: 1px solid $main-red;
+          font-size: 1.5rem;
+          display: block;
           color: $main-gray-trans;
           span {
-            color: white;
+            color: $nav-gray-1;
           }
         }
       }
@@ -307,7 +312,7 @@ nav {
 }
 
 @media only screen and (min-width: 1201px) {
-    nav {
+    .main-nav {
       .nav-item a {
         &:hover {
           height: 100%;
