@@ -36,6 +36,7 @@ nav {
   .logo-container {
     height: 15%;
     overflow: hidden;
+    background-color: $main-black;
     .logo {
       @include flex-center;
       color: $main-gray;
@@ -151,7 +152,7 @@ nav {
         height: 100%;
         width: 100%;
         background-repeat: no-repeat;
-
+        background-position: center;
         background-image: url("https://github.com/kostyrko/flacky-meble/blob/dev/img/hanoi.jpg?raw=true");
         position: relative;
         .name-1,

@@ -31,6 +31,10 @@
     }
     .confirm {
       background-color:$secondary-red;
+      &:active {
+        background-color:$main-red;
+        font-weight: 600;
+      }
     }
   }
 }

@@ -10,7 +10,7 @@ const Summery = ({data}) => {
           <div className="summery-list" key={num}>
             <h4>Ściana {num}</h4>
             <p className="dimensions">Długość: <span> {dimensions.width} cm </span>, wysokość: <span> {dimensions.height} cm </span></p>
-            <p className="price"> Łączna cena szafek na podstawie podanych danych  <span> {price} pln</span></p>
+            <p className="price"> Cena szafek na podstawie podanych danych  <span> {price} pln </span> (dla tej ściany)</p>
             <p className="lining">rodzaj okładziny <span>{lining}</span></p>
             {
               <>
