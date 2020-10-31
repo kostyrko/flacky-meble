@@ -32,4 +32,9 @@
     padding: 5px;
     border-radius: $primary-radius;
   }
+  button[disabled=disabled], button:disabled {
+    background-color: $main-gray-trans-3;
+    color: $nav-gray-1;
+    border: 1px solid $main-red-trans-2;
+  }
 }

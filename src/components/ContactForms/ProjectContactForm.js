@@ -66,7 +66,7 @@ wymiary ściany - długość ${dimensions.width}, wysokość ${dimensions.height
       // empty errors Arr
       setErrors([]);
       const form = e.target;
-      console.log(form);
+      // console.log(form);
       const data = new FormData(form);
       const xhr = new XMLHttpRequest();
       xhr.open(form.method, form.action);

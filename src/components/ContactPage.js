@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactForm from './ContactForms/ContactForm'
 
 const ContactPage = () => {
   return (
@@ -12,6 +13,7 @@ const ContactPage = () => {
         </p>
         <p>Zapraszamy do korzystania z naszej oferty!</p>
       </div>
+      <ContactForm/>
     </section>
   );
 }
