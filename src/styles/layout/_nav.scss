@@ -224,28 +224,30 @@ nav {
       }
       .services {
         grid-area: services;
-        background-image: url("https://live.staticflickr.com/65535/50324132581_590891a2e2.jpg");
+        background-image: url("../../assets/img/services3.jpg");
       }
       .about {
         grid-area: about;
         height: 86%;
         width: 96%;
         margin-top: 5px;
-        background-image: url("https://live.staticflickr.com/65535/50323792811_f318a5c827.jpg");
+        background-image: url("../../assets/img/about2.jpg");
       }
       .portfolio {
         grid-area: portfolio;
         width: 98%;
-        background-image: url("https://live.staticflickr.com/65535/50323455768_2c7f8e88c2.jpg");
+        background-image: url("../../assets/img/portfolio.jpg");
+        background-position: 90% 80%;
+        
       }
       .contact {
         grid-area: contact;
         width: 95%;
-        background-image: url("https://live.staticflickr.com/65535/50324039627_806c054efb.jpg");
+        background-image: url("../../assets/img/contact2.jpg");
       }
       .calculator {
         grid-area: calculator;
-        background-image: url("https://live.staticflickr.com/65535/50324302302_99010173c3.jpg");
+        background-image: url("../../assets/img/calculator.jpg");
       }
     }
   }
