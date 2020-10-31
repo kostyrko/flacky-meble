@@ -1,3 +1,10 @@
+@import "./calculator/walls_drawing";
+@import "./calculator/kitchen_units";
+@import "./calculator/walls_input";
+@import "./calculator/wall";
+@import "./calculator/summery";
+
+
 .calculator-section {
   min-height: 90vh;
   display: flex;
@@ -122,10 +129,3 @@
     @include flex-center;
   }
 }
-
-@import "./calculator/walls_drawing";
-@import "./calculator/kitchen_units";
-@import "./calculator/walls_input";
-@import "./calculator/wall";
-@import "./calculator/contact_form";
-@import "./calculator/summery";

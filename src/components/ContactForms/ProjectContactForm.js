@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ContactForm = ({ data }) => {
+const ProjectContactForm = ({ data }) => {
   const [addInfo, setAddInfo] = useState("");
   const [projectInfo, setProjectInfo] = useState("");
   const [status, setStatus] = useState("");
@@ -97,6 +97,7 @@ wymiary ściany - długość ${dimensions.width}, wysokość ${dimensions.height
       <label className="additional-label"> <span>Email</span> (wymagane):</label>
       <input
         type="email"
+        
         name="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -139,4 +140,4 @@ wymiary ściany - długość ${dimensions.width}, wysokość ${dimensions.height
   );
 };
 
-export default ContactForm;
+export default ProjectContactForm;

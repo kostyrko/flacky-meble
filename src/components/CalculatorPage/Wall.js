@@ -3,7 +3,6 @@ import { kitchenUnits } from "./db";
 import KitchenUnits from "./KitchenUnits";
 import DrawUnit from "./DrawUnit";
 
-
 export const Wall = ({ num, handleConfirmation }) => {
   // * handle wall dimensions
   const [dimensions, setDimensions] = useState({
@@ -168,19 +167,31 @@ export const Wall = ({ num, handleConfirmation }) => {
             <div className="upperUnitsDrawing">
               {upperUnits &&
                 Object.keys(upperUnits).map((elem) => (
-                  <DrawUnit key={elem} info={upperUnits[elem]} handleInput={handleInput} handleDelete={handleDelete} elem={elem} />
+                  <DrawUnit
+                    key={elem}
+                    info={upperUnits[elem]}
+                    handleInput={handleInput}
+                    handleDelete={handleDelete}
+                    elem={elem}
+                  />
                 ))}
             </div>
             <div className="lowerUnitsDrawing">
               {lowerUnits &&
                 Object.keys(lowerUnits).map((elem) => (
-                  <DrawUnit key={elem} info={lowerUnits[elem]} handleInput={handleInput} handleDelete={handleDelete} elem={elem} />
+                  <DrawUnit
+                    key={elem}
+                    info={lowerUnits[elem]}
+                    handleInput={handleInput}
+                    handleDelete={handleDelete}
+                    elem={elem}
+                  />
                 ))}
             </div>
           </div>
         </div>
       </div>
-      
+
       <div className="walls-input">
         <p>Wymiary ściany (w cm)</p>
         <label htmlFor="width">Szerokość</label>
@@ -203,7 +214,8 @@ export const Wall = ({ num, handleConfirmation }) => {
       <div className="summery">
         <label htmlFor="lining-options">Rodzaj okładziny</label>
         <div name="lining-options" className="radio-form">
-          <input {...radioButton} value="lakier" id="lakier" defaultChecked /> Lakierowana
+          <input {...radioButton} value="lakier" id="lakier" defaultChecked />{" "}
+          Lakierowana
           <input {...radioButton} value="fornir" id="fornir" /> Fornir
           <input {...radioButton} value="melamina" id="melamina" /> Melamina
         </div>

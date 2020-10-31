@@ -2,14 +2,18 @@
 @import "variables";
 @import "mixins";
 @import "base";
-@import "nav";
-@import "home";
-@import "mainPage";
-@import "portfolio";
-@import "services";
-@import "about";
-@import "calculator";
-@import "notFound";
-@import "contact";
-@import "footer";
+
+@import "layout/nav";
+@import "layout/footer";
+
+@import "pages/homePage";
+@import "pages/mainPage";
+@import "pages/portfolioPage";
+@import "pages/servicesPage";
+@import "pages/aboutPage";
+@import "pages/calculatorPage";
+@import "pages/notFoundPage";
+@import "pages/contactPage";
+
+@import "pages/contactForm/contact_form";
 

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import WallsOption from "./Calculator/WallsOption.js";
-import { Wall } from "./Calculator/Wall.js";
-import Summery from "./Calculator/Summery.js";
-import ContactForm from "./Calculator/ContactForm.js";
+import WallsOption from "./WallsOption.js";
+import { Wall } from "./Wall.js";
+import Summery from "./Summery.js";
+import ProjectContactForm from "../ContactForms/ProjectContactForm.js";
 
-const Calculator = () => {
+const CalculatorPage = () => {
   // number of walls
   const [wallNum, setWallNum] = useState(1);
   const [project, setProject] = useState({});
@@ -37,8 +37,6 @@ const Calculator = () => {
       <div className="container">
         <div className="calculator-info">
           <h2>Zaprojektuj swoją kuchnię</h2>
-          {/* <p>W tym miejscu możesz stworzyć projekt swojej kuchni, poznać jego wstępną wycenę oraz wysłać go do nas, a my się z Tobą skontaktujemy w celu realizacji Twojego pomysłu</p>
-          <p>Projekt powstanie na podstawie zaproponowanego przez nas zestawu szafek wiszących oraz stojących. Możesz dopasować ich szerokość oraz wybrać odpowiedni dla Ciebie front (lakier,fornir, melamina), w cenie szafki wliczony jest uchwyt (spośród 40 do wyboru na późniejszym etapie realizacji projektu) </p> */}
           <div>
             {/* <p>Postępuj zgodnie z poniższymi krokami działania</p> */}
             <ol className="instruction-list">
@@ -78,7 +76,7 @@ const Calculator = () => {
         {Object.keys(project).length > 0 && (
           <>
             <Summery data={project} />
-            <ContactForm data={project} />
+            <ProjectContactForm data={project} />
           </>
         )}
       </div>
@@ -86,4 +84,4 @@ const Calculator = () => {
   );
 };
 
-export default Calculator;
+export default CalculatorPage;
