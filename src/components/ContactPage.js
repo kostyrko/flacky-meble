@@ -5,9 +5,11 @@ const ContactPage = () => {
   return (
     <section className="contact-section">
       <div className="container">
-        <p>Wszelkie pytania oraz zamówienia prosimy kierować na adresy:</p>
-        <p>fcmeble@gmail.com</p>
-        <p>lub dzwonić pod numer:  519 872 216</p>
+        <p>Wszelkie pytania oraz zamówienia prosimy kierować na adres:</p>
+        <p className="contact-details">fcmeble@gmail.com</p>
+        <p>lub poprzez wypełnienie poniższego formularza kontaktowego</p>
+        <p>zachęcamy również do  kontaktu telefonicznego:</p>
+        <p className="contact-details">519 872 216</p>
         <p>
           Meble na zamówienie wykonujemy głównie na terenie Poznania.
         </p>
