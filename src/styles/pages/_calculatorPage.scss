@@ -1,0 +1,171 @@
+@import "./calculator/walls_drawing";
+@import "./calculator/kitchen_units";
+@import "./calculator/walls_input";
+@import "./calculator/wall";
+@import "./calculator/summery";
+
+
+.calculator-section {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  .decoration-1 {
+    background: url('../../assets/icons/kitchen-cabinets.svg') no-repeat center;
+    width: 150px;
+    height: 150px;
+    background-size: 90%;
+  }
+  .decoration-2 {
+    background: url('../../assets/icons/triangle-bottom-arrow.svg') no-repeat center;
+    margin-top: 20px;
+    width: 100%;
+    height: 25px;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .calculator-info {
+    @include flex-center;
+    flex-direction: column;
+    max-width: 1200px;
+    padding: 25px;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    &::after {
+      content: "";
+      position: relative;
+      bottom: 32px;
+      width: 100%;
+      left: -10px;
+      height: 25px;
+      z-index: -1;
+      display: block;
+      background-color: $main-gray-trans-4;
+    }
+    
+  }
+  
+  .instruction-list {
+    list-style: inside decimal;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+    .instruction-elem {
+      padding: 10px;
+    }
+  }
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .project-form {
+    .walls-option {
+      margin: 2% 0;
+      text-align: center;
+      border: 2px solid $main-gray-trans;
+      padding: 35px;
+      border-radius: $primary-radius/2;
+      label {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+      div {
+        font-weight: 600;
+        font-size: 1.25rem;
+        position: relative;
+        input {
+          margin-top: 20px;
+        }
+        input~input {
+          margin-left: 15px;
+        }
+        #text {
+          font: red
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 358px;
+          bottom: -46px;
+          left: -28px;
+          height: 130px;
+          z-index: -1;
+          display: block;
+          background-color: $main-gray-trans-4;
+          border-radius: $primary-radius/2;
+        }
+      }
+    }
+    
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.options {
+  display: flex;
+}
+
+.project-summery {
+  height: 100px;
+  width: 90%;
+}
+
+
+
+.wall-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: $main-red-trans;
+  }
+  .cm-input {
+    width: 100px;
+    margin: 10px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+  }
+  li {
+    margin: 5px;
+    border: 1px solid black;
+    max-width: 200px;
+    input {
+      max-width: 100px;
+    }
+  }
+}
+
+// Contact form
+
+.contact-form {
+  .validation {
+    p {
+      margin: 5px 0;
+      // min-width: 50vw;
+      padding: 10px;
+      color: white;
+      background-color: $main-red;
+      border-radius: 25px;
+    }
+  }
+  .submit {
+    width: 100%;
+    @include flex-center;
+  }
+}

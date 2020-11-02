@@ -1,0 +1,49 @@
+.wall-container {
+  margin: 25px 0;
+  border: 2px solid $light-gray;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+  .summery {
+    margin: 10px;
+    border: 2px solid $main-gray;
+    width: 95%;
+    max-width: 1200px;
+    @include flex-center;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    label {
+      color: white;
+      background-color:$nav-gray-2;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    .radio-form {
+      margin: 10px 0;
+      font-size: 1.25rem;
+      font-weight: 500;
+      input ~ input {
+        margin-left: 30px;
+      }
+    }
+    p {
+      margin: 10px;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: $main-red;
+    }
+    .confirm {
+      margin: 15px;
+      background-color:$secondary-red;
+      font-weight: 600;
+      height: 40px;
+      &:active {
+        background-color:$main-red;
+        font-weight: 600;
+      }
+    }
+  }
+}
+

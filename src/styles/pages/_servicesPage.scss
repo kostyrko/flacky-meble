@@ -1,0 +1,169 @@
+.services-section {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  // min-height: 100vh;
+  .container {
+    min-height: 95vh;
+    padding: 0 25px;
+    overflow: hidden;
+    h2,
+    h3 {
+      padding: 10px 0;
+      font-weight: 600;
+      position: relative;
+    }
+    h2 {
+      font-size: 1.35rem;
+      &::after {
+        content: "";
+        position: relative;
+        bottom: 15px;
+        width: 310px;
+        left: -10px;
+        height: 12px;
+        z-index: -1;
+        display: block;
+        background-color: $main-gray-trans-4;
+      }
+    }
+    .decoration-1 {
+      position: absolute;
+      left: 400px;
+      top: 50px;
+      width: 100px;
+      height: 150px;
+      background: url('../../assets/icons/ruler-measurement.svg') no-repeat ;
+      transform: scaleX(-1) rotate(40deg);
+    }
+    h3 {
+      font-size: 1.25rem;
+      display: block;
+    }
+    h3 {
+      &::after {
+        content: "";
+        position: relative;
+        bottom: 30px;
+        left: -10px;
+        width: 80px;
+
+        height: 20px;
+        display: block;
+        background-color: $main-gray-trans-4;
+        z-index: -1;
+      }
+    }
+  }
+
+  ul {
+    list-style: square;
+    list-style-position: inside;
+  }
+  ol {
+    list-style: decimal;
+    list-style-position: inside;
+    position: relative;
+  }
+  .decoration-2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 75%;
+      height: 75%;
+      background: url('../../assets/icons/settings-line.svg') no-repeat center;
+      opacity: 0.05;
+      z-index: -1;
+      background-size: 100%;
+      transform: translate(-50%,-50%);
+  }
+  .text-info-1,
+  .text-info-2 {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    line-height: 2rem;
+  }
+  .text-info-1 {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text-info-2 {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-photo-1,
+  .about-photo-2 {
+    border-radius: 15px;
+    margin: 5px;
+  }
+  .about-photo-1 {
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../src/assets/img/contact2.jpg");
+  }
+  .about-photo-2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../src/assets/img/contact.jpg");
+  }
+}
+
+@media only screen and (min-width: 782px) and (min-height: 550px) {
+  .services-section {
+    .container {
+      padding: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "photo2 photo1";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "photo1 text1" "text2 photo2";
+    }
+    .text-info-1, .text-info-2 {
+      padding: 50px;
+    }
+    .text-info-1 {
+      grid-area: text1;
+    }
+    .text-info-2 {
+      grid-area: text2;
+    }
+    .about-photo-1 {
+      background-attachment: scroll;
+      grid-area: photo1;
+    }
+    .about-photo-2 {
+      grid-area: photo2;
+    }
+    .about-photo-1,
+    .about-photo-2 {
+    margin: 50px;
+  }
+  }
+}
+
+@media only screen and (max-width: 368px)  {
+  .services-section {
+    .container {
+      h2 {
+        &::after {
+          content: "";
+          position: relative;
+          bottom: 15px;
+          width: 100px;
+          left: -10px;
+          height: 12px;
+          z-index: -1;
+          display: block;
+          background-color: $main-gray-trans-4;
+        }
+      }
+    }
+  }
+}

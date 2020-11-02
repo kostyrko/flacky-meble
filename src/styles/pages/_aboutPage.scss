@@ -1,0 +1,127 @@
+.about-section {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  .container {
+    min-height: 95vh;
+    padding: 0 25px;
+    overflow: hidden;
+  }
+  .text-info-1,
+  .text-info-2 {
+    // height: 45vh;
+    display: flex;
+    padding: 35px;
+    line-height: 2rem;
+    position: relative;
+  }
+  .text-info-1 {
+    font-weight: 400;
+    align-items: center;
+    span {
+      position: relative;
+      color: $main-red-trans-1;
+      font-weight: 500;
+    }
+  }
+  .decoration-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: url('../../assets/icons/innovation.svg') no-repeat center;
+    transform: translate(-50%,-50%);
+    opacity: 0.05;
+  }
+  .text-info-2 {
+    font-weight: 400;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .decoration-2 {
+    position: absolute;
+    top: 85%;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    background: url('../../assets/icons/measurement-tool.svg') no-repeat center;
+    transform: scaleX(-1) translate(-50%,-50%);
+    opacity: 0.05;
+  }
+  
+  .about-photo-1,
+  .about-photo-2 {
+    border-radius: 15px;
+    margin: 10px;
+  }
+  .about-photo-1 {
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../src/assets/img/calculator.jpg");
+  }
+  .about-photo-2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../src/assets/img/services.jpg");
+  }
+}
+
+@media only screen and (min-width: 782px) and (min-height: 550px) {
+  .about-section {
+    .container {
+      padding: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "photo2 photo1";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "text1 photo1" "photo2 text2";
+    }
+    .text-info-1 {
+      grid-area: text1;
+      .decoration-1 {
+        opacity: 1;
+        top: 80%;
+      }
+      span {
+        font-weight: 400;
+        color: $main-black;
+      }
+      .highlight {
+        position: absolute;
+        left: 42px;
+        bottom: 2px;
+        width: 224px;
+        height: 22px;
+        background-color: $main-red-trans-1;
+        z-index: -1;
+      }
+    }
+    .text-info-2 {
+      grid-area: text2;
+      .decoration-2 {
+        opacity: 1;
+        top: 80%;
+      }
+    }
+    .about-photo-1, .about-photo-2 {
+      margin: 50px;
+    }
+    .about-photo-1 {
+      background-attachment: scroll;
+
+      grid-area: photo1;
+    }
+    .about-photo-2 {
+      grid-area: photo2;
+    }
+  }
+}

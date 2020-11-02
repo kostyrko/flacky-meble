@@ -1,0 +1,91 @@
+.contact-section {
+  
+  .container {
+    position: relative;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    &::after {
+      content: "";
+      position: relative;
+      bottom: 34px;
+      width: 110px;
+      left: -10px;
+      height: 25px;
+      z-index: -1;
+      display: block;
+      background-color: $main-gray-trans-4;
+    }
+  }
+  p {
+    margin: 15px 0;
+  }
+  min-height: 100vh;
+  @include flex-center;
+  flex-direction: column;
+  margin: 60px 20px;
+  .container {
+    // width: 1200px;
+    border: 1 solid $main-gray;
+    font-size: 1.25rem;
+    line-height:2rem;
+    .contact-details {
+      font-weight: 600;
+    }
+  }
+  .contact-form {
+    background-color: $nav-gray-1;
+    border-radius: 0;
+    border: none;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    
+    // width: 50vw;
+    min-width: 300px;
+    input[type="email"], textarea {
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      border-radius: 0;
+      border: none;
+      border-bottom: 2px solid $main-black;
+      &::placeholder {
+        padding: 2px;
+        color: black;
+      }
+    }
+    input[type="email"] {
+      width: 50%;
+      margin-bottom: 25px;
+    }
+    .btn-2 {
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      width: 150px;
+      border-radius: 0;
+      align-self:center;
+      background-color: rgba(255, 255, 255, 0);
+      color: $main-black;
+      font-weight: 600;
+      border: 2px solid $main-black;
+    }
+    .btn-2[disabled=disabled], button:disabled  {
+      // font-weight: 600;
+      color: $graphite;
+      border: 3px solid $graphite;
+    }
+  }
+  .decoration-1 {
+    position: absolute;
+    top: -225px;
+    width: 250px;
+    right: 0px;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.03;
+    background: url('../../assets/icons/email-mail-sent.svg') no-repeat center;
+  }
+}

@@ -1,0 +1,55 @@
+.kitchen-units {
+  height: 500px;
+  width: 250px;
+  border: 2px solid $nav-gray-1;
+  overflow: scroll;
+  border-radius: 5px;
+  overflow-x: hidden;
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .option {
+      margin: 10px;
+      border: 2px solid $main-gray-trans;
+      @include flex-center;
+      flex-direction: column;
+      border-radius: 5px;
+      overflow: hidden;
+      h5 {
+        background-color: $nav-gray-1;
+      }
+      h5,
+      p {
+        padding: 2px;
+        width: 100%;
+        text-align: center;
+      }
+      p {
+        font-size: 0.85rem;
+        background-color: $light-gray;
+      }
+    }
+    img {
+      height: 100px;
+    }
+  }
+}
+
+.kitchen-units {
+  h4 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 20px;
+    line-height: 3rem;
+    width: 100%;
+    background-color: $main-red-trans-1;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .kitchen-units {
+    width: 500px;
+  }
+}
