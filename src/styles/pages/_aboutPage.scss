@@ -19,16 +19,8 @@
     align-items: center;
     span {
       position: relative;
-    }
-    
-    .highlight {
-      position: absolute;
-      left: 42px;
-      bottom: 0px;
-      width: 232px;
-      height: 25px;
-      background-color: $main-red-trans-1;
-      z-index: -1;
+      color: $main-red-trans-1;
+      font-weight: 500;
     }
   }
   .decoration-1 {
@@ -98,6 +90,19 @@
       .decoration-1 {
         opacity: 1;
         top: 80%;
+      }
+      span {
+        font-weight: 400;
+        color: $main-black;
+      }
+      .highlight {
+        position: absolute;
+        left: 42px;
+        bottom: 2px;
+        width: 224px;
+        height: 22px;
+        background-color: $main-red-trans-1;
+        z-index: -1;
       }
     }
     .text-info-2 {
