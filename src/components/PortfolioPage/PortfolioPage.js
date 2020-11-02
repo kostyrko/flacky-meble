@@ -26,7 +26,6 @@ const PortfolioPage = () => {
   return (
     <main className="portfolio">
       <div className="portfolio-container">
-        <h2>Zrealizowane przez nas projekty</h2>
         <div className="albums-container">
           {albums.length > 0
             ? albums.map((elem) => {

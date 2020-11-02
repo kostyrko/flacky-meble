@@ -7,7 +7,7 @@ const Services = () => {
     <main className="services-section">
       <div className="container">
           <div className="text-info-1">
-            <h2>Wykonujemy meble na wymiar.</h2>
+            <h2>Wykonujemy meble na wymiar.<div className="decoration-1"></div></h2>
             <p>Specjalizujemy się w zabudowach kuchennych.</p>
 
             <div className="offer">
@@ -34,6 +34,7 @@ const Services = () => {
             Jak pracujemy?
             </h3>
             <ol className="work-list">
+            <div className="decoration-2"></div>
               <li>
                 Zaczynamy od spotkania i rozmowy, podczas której chcemy uzyskać jak najwięcej informacji na temat potrzeb klientów i ich wyobrażenia na temat planowanej zabudowy. Dysponujemy wzornikami, katalogami oraz wiedzą na temat wad i zalet różnych rozwiązań. Współpracujemy z najlepszymi dostawcami różnorodnych materiałów, okuć i systemów meblowych. Osoby, które rozmawiają z klientami wykonują później projekt dla nich i montują meble, co oznacza, że naprawdę wiedzą o czym mówią.
               </li>

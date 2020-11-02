@@ -1,4 +1,6 @@
 .about-section {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   .container {
     min-height: 95vh;
     padding: 0 25px;
@@ -10,19 +12,56 @@
     display: flex;
     padding: 35px;
     line-height: 2rem;
+    position: relative;
   }
   .text-info-1 {
-    font-weight: 600;
+    font-weight: 400;
     align-items: center;
+    span {
+      position: relative;
+    }
+    
+    .highlight {
+      position: absolute;
+      left: 42px;
+      bottom: 0px;
+      width: 232px;
+      height: 25px;
+      background-color: $main-red-trans-1;
+      z-index: -1;
+    }
+  }
+  .decoration-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: url('../../assets/icons/innovation.svg') no-repeat center;
+    transform: translate(-50%,-50%);
+    opacity: 0.05;
   }
   .text-info-2 {
-    font-weight: 500;
+    font-weight: 400;
     flex-direction: column;
     justify-content: center;
+    position: relative;
   }
+  .decoration-2 {
+    position: absolute;
+    top: 85%;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    background: url('../../assets/icons/measurement-tool.svg') no-repeat center;
+    transform: scaleX(-1) translate(-50%,-50%);
+    opacity: 0.05;
+  }
+  
   .about-photo-1,
   .about-photo-2 {
     border-radius: 15px;
+    margin: 10px;
   }
   .about-photo-1 {
     min-height: 500px;
@@ -32,13 +71,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url("https://live.staticflickr.com/65535/50323792811_f318a5c827.jpg");
+    background-image: url("../../../src/assets/img/calculator.jpg");
   }
   .about-photo-2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url("https://live.staticflickr.com/65535/50324132581_590891a2e2.jpg");
+    background-image: url("../../../src/assets/img/services.jpg");
   }
 }
 
@@ -56,9 +95,20 @@
     }
     .text-info-1 {
       grid-area: text1;
+      .decoration-1 {
+        opacity: 1;
+        top: 80%;
+      }
     }
     .text-info-2 {
       grid-area: text2;
+      .decoration-2 {
+        opacity: 1;
+        top: 80%;
+      }
+    }
+    .about-photo-1, .about-photo-2 {
+      margin: 50px;
     }
     .about-photo-1 {
       background-attachment: scroll;

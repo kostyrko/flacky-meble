@@ -14,23 +14,31 @@
     border-radius: 5px;
     overflow: hidden;
     label {
-      background-color:$main-gray;
+      color: white;
+      background-color:$nav-gray-2;
       padding: 10px;
       text-align: center;
       width: 100%;
     }
     .radio-form {
       margin: 10px 0;
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: 1.25rem;
+      font-weight: 500;
+      input ~ input {
+        margin-left: 30px;
+      }
     }
     p {
-      font-weight: 600;
-      font-size: 1.2rem;
+      margin: 10px;
+      font-weight: 500;
+      font-size: 1.5rem;
       color: $main-red;
     }
     .confirm {
+      margin: 15px;
       background-color:$secondary-red;
+      font-weight: 600;
+      height: 40px;
       &:active {
         background-color:$main-red;
         font-weight: 600;

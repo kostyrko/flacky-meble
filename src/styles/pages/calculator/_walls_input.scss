@@ -8,13 +8,16 @@
     flex-wrap: wrap;
     border-radius: 5px;
     p {
-      background-color:$main-gray;
+      color: white;
+      background-color:$nav-gray-2;
       padding: 10px;
       text-align: center;
       width: 100%;
     }
     input {
-      border-radius: 5px
+      height: 25px;
+      border-radius: 5px;
+      font-size: 1.15rem;
     }
   }
 }

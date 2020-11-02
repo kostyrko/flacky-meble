@@ -9,6 +9,18 @@
   min-height: 90vh;
   display: flex;
   justify-content: center;
+  .decoration-1 {
+    background: url('../../assets/icons/kitchen-cabinets.svg') no-repeat center;
+    width: 150px;
+    height: 150px;
+    background-size: 90%;
+  }
+  .decoration-2 {
+    background: url('../../assets/icons/triangle-bottom-arrow.svg') no-repeat center;
+    margin-top: 20px;
+    width: 100%;
+    height: 25px;
+  }
   .container {
     display: flex;
     align-items: center;
@@ -22,15 +34,27 @@
   }
   h2 {
     font-weight: 600;
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    margin-top: 20px;
+    &::after {
+      content: "";
+      position: relative;
+      bottom: 32px;
+      width: 100%;
+      left: -10px;
+      height: 25px;
+      z-index: -1;
+      display: block;
+      background-color: $main-gray-trans-4;
+    }
+    
   }
-  // p {
-  //   padding: 15px;
-  // }
+  
   .instruction-list {
     list-style: inside decimal;
     text-align: center;
     font-weight: 600;
+    margin-top: 10px;
     .instruction-elem {
       padding: 10px;
     }
@@ -44,25 +68,41 @@
     .walls-option {
       margin: 2% 0;
       text-align: center;
-      border: 2px solid $graphite;
-      padding: 25px;
-      border-radius: $primary-radius;
+      border: 2px solid $main-gray-trans;
+      padding: 35px;
+      border-radius: $primary-radius/2;
       label {
-        // padding: 25px;
         font-weight: 600;
         font-size: 1.2rem;
-        // width: 100%;
-        // display: block;
-        // background-color: $main-gray;
       }
       div {
-        padding: 10px;
+        font-weight: 600;
+        font-size: 1.25rem;
+        position: relative;
+        input {
+          margin-top: 20px;
+        }
         input~input {
           margin-left: 15px;
         }
+        #text {
+          font: red
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 358px;
+          bottom: -46px;
+          left: -28px;
+          height: 130px;
+          z-index: -1;
+          display: block;
+          background-color: $main-gray-trans-4;
+          border-radius: $primary-radius/2;
+        }
       }
     }
-    border-top: 1px solid $main-gray;
+    
     width: 100%;
     height: 100%;
   }
@@ -89,7 +129,7 @@
     text-align: center;
     font-weight: 600;
     font-size: 1.5rem;
-    background-color: $main-gray;
+    background-color: $main-red-trans;
   }
   .cm-input {
     width: 100px;

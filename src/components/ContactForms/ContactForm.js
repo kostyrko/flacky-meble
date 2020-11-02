@@ -45,25 +45,20 @@ const ContactForm = () => {
       method="POST"
       className="contact-form"
     >
-      <label className="additional-label">
-        {" "}
-        <span>Email</span> (wymagane):
-      </label>
+      
       <input
         type="email"
-        placeholder={"min. 7 znaków + @"}
+        placeholder={"Twój email (min. 7 znaków + @)"}
         name="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
 
-      <label className="additional-label" htmlFor="textArea">
-        Napisz do nas wiadomość
-      </label>
+      
       <textarea
         name="textArea"
         className="project-summery"
-        placeholder={"Wiadomość powinna mieć przynajmniej 150 znaków"}
+        placeholder={"W czym możemy Tobie pomóc? (Wiadomość powinna mieć przynajmniej 150 znaków)"}
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />

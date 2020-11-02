@@ -11,6 +11,8 @@ const CalculatorPage = () => {
 
   // set num of walls -> wallNum
   const handleWallNumChange = (e) => {
+    console.log(e);
+    console.log(e.target.value);
     setWallNum(parseInt(e.target.value));
   };
 
@@ -37,6 +39,7 @@ const CalculatorPage = () => {
       <div className="container">
         <div className="calculator-info">
           <h2>Zaprojektuj swoją kuchnię</h2>
+          <div className="decoration-1"></div>
           <div>
             {/* <p>Postępuj zgodnie z poniższymi krokami działania</p> */}
             <ol className="instruction-list">
@@ -60,6 +63,7 @@ const CalculatorPage = () => {
                 a my się z Tobą skontaktujemy
               </li>
             </ol>
+            <div className="decoration-2"></div>
           </div>
         </div>
         <form className="project-form">
