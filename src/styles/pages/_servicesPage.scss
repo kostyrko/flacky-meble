@@ -26,15 +26,6 @@
         background-color: $main-gray-trans-4;
       }
     }
-    .decoration-1 {
-      position: absolute;
-      left: 400px;
-      top: 50px;
-      width: 100px;
-      height: 150px;
-      background: url('../../assets/icons/ruler-measurement.svg') no-repeat ;
-      transform: scaleX(-1) rotate(40deg);
-    }
     h3 {
       font-size: 1.25rem;
       display: block;
@@ -64,18 +55,18 @@
     list-style-position: inside;
     position: relative;
   }
-  .decoration-2 {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 75%;
-      height: 75%;
-      background: url('../../assets/icons/settings-line.svg') no-repeat center;
-      opacity: 0.05;
-      z-index: -1;
-      background-size: 100%;
-      transform: translate(-50%,-50%);
-  }
+  // .decoration-2 {
+  //     position: absolute;
+  //     left: 50%;
+  //     top: 50%;
+  //     width: 75%;
+  //     height: 75%;
+  //     background: url('../../assets/icons/settings-line.svg') no-repeat center;
+  //     opacity: 0.05;
+  //     z-index: -1;
+  //     background-size: 100%;
+  //     transform: translate(-50%,-50%);
+  // }
   .text-info-1,
   .text-info-2 {
     position: relative;
@@ -125,6 +116,15 @@
       grid-template-rows: 1fr 1fr;
       grid-template-areas: "photo1 text1" "text2 photo2";
     }
+    // .decoration-1 {
+    //   position: absolute;
+    //   left: 400px;
+    //   top: 50px;
+    //   width: 100px;
+    //   height: 150px;
+    //   background: url('../../assets/icons/ruler-measurement.svg') no-repeat ;
+    //   transform: scaleX(-1) rotate(40deg);
+    // }
     .text-info-1, .text-info-2 {
       padding: 50px;
     }
