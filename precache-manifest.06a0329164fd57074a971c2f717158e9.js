@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bdc4ebe0f64a510920ccfba6545aaa16",
+    "revision": "65f02b4386a872db60799be25075c4c1",
     "url": "/flacky-meble/index.html"
   },
   {
-    "revision": "785aa529fb98f6a0cc53",
-    "url": "/flacky-meble/static/css/main.31929ff4.chunk.css"
+    "revision": "1d2ef1a9a31ef295075a",
+    "url": "/flacky-meble/static/css/main.ffffa5ee.chunk.css"
   },
   {
     "revision": "e4d03d6ecf7e9188412d",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flacky-meble/static/js/2.9cdacf2e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "785aa529fb98f6a0cc53",
+    "revision": "1d2ef1a9a31ef295075a",
     "url": "/flacky-meble/static/js/main.8332f4c9.chunk.js"
   },
   {
@@ -64,20 +64,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flacky-meble/static/media/portfolio.5e3f0c45.jpg"
   },
   {
-    "revision": "1897ac2aa8fefb4044e445eb09af7e03",
-    "url": "/flacky-meble/static/media/ruler-measurement.1897ac2a.svg"
-  },
-  {
     "revision": "a84c8804f8c1262e5ba939bd3554fea3",
     "url": "/flacky-meble/static/media/services.a84c8804.jpg"
   },
   {
     "revision": "27f176a11ec88a8f6228744f06eeb12c",
     "url": "/flacky-meble/static/media/services3.27f176a1.jpg"
-  },
-  {
-    "revision": "c1eaac5dbeab6957139ab958927356c3",
-    "url": "/flacky-meble/static/media/settings-line.c1eaac5d.svg"
   },
   {
     "revision": "5ac5dcc2269a83741ee8253ce9d13191",
