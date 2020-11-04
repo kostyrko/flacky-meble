@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "65f02b4386a872db60799be25075c4c1",
+    "revision": "ca0af74854b93107c71566f4eb361ae8",
     "url": "/flacky-meble/index.html"
   },
   {
-    "revision": "1d2ef1a9a31ef295075a",
-    "url": "/flacky-meble/static/css/main.ffffa5ee.chunk.css"
+    "revision": "1cb09452a6c9e794e8f6",
+    "url": "/flacky-meble/static/css/main.b37a55ed.chunk.css"
   },
   {
     "revision": "e4d03d6ecf7e9188412d",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flacky-meble/static/js/2.9cdacf2e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1d2ef1a9a31ef295075a",
+    "revision": "1cb09452a6c9e794e8f6",
     "url": "/flacky-meble/static/js/main.8332f4c9.chunk.js"
   },
   {
@@ -48,16 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flacky-meble/static/media/hanoi.4c45d553.jpg"
   },
   {
-    "revision": "da798b1fd57822acc4130fc3b4f59be9",
-    "url": "/flacky-meble/static/media/innovation.da798b1f.svg"
-  },
-  {
     "revision": "1d741b74f51cc9da025be38949ea28f3",
     "url": "/flacky-meble/static/media/kitchen-cabinets.1d741b74.svg"
-  },
-  {
-    "revision": "cf828216cbfec9d68b0146cd66d55f5c",
-    "url": "/flacky-meble/static/media/measurement-tool.cf828216.svg"
   },
   {
     "revision": "5e3f0c452d6a406a3293109f6c9558e3",
