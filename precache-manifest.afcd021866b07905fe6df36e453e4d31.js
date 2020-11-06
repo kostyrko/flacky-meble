@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ca0af74854b93107c71566f4eb361ae8",
+    "revision": "6f9e455bd6657cdf8b7636b4db8665bc",
     "url": "/flacky-meble/index.html"
   },
   {
-    "revision": "1cb09452a6c9e794e8f6",
-    "url": "/flacky-meble/static/css/main.b37a55ed.chunk.css"
+    "revision": "2c2abcb7bea007aa4986",
+    "url": "/flacky-meble/static/css/main.f215e15e.chunk.css"
   },
   {
     "revision": "e4d03d6ecf7e9188412d",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flacky-meble/static/js/2.9cdacf2e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1cb09452a6c9e794e8f6",
-    "url": "/flacky-meble/static/js/main.8332f4c9.chunk.js"
+    "revision": "2c2abcb7bea007aa4986",
+    "url": "/flacky-meble/static/js/main.24076b09.chunk.js"
   },
   {
     "revision": "c85da60df4253b79c8b5",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6ee760cecc086dd99b90dad424f43006",
     "url": "/flacky-meble/static/media/email-mail-sent.6ee760ce.svg"
+  },
+  {
+    "revision": "1ff9b7d9bf32cb199dfae7e34317963d",
+    "url": "/flacky-meble/static/media/facebook-square.1ff9b7d9.svg"
   },
   {
     "revision": "4c45d553edf65e0812a4e6daa9a729c7",
