@@ -2,8 +2,10 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   // min-height: 100vh;
+  @include flex-center;
+  min-height: 95vh;
   .container {
-    min-height: 95vh;
+    max-width: 1400px;
     padding: 0 25px;
     overflow: hidden;
     h2,

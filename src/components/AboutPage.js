@@ -27,7 +27,11 @@ const AboutPage = () => {
             chętnie o nich opowiadamy. Zapraszamy do skorzystania z naszych
             usług.
           </p>
-          <div className="decoration-2"></div>
+          <div className="social-link">
+            <a href="https://www.facebook.com/FlackyCombination">
+              <div className="icon"></div>
+            </a>
+          </div>
         </div>
 
         <div className="about-photo-2"></div>

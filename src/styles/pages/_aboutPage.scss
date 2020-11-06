@@ -1,8 +1,10 @@
 .about-section {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  min-height: 95vh;
+  @include flex-center;
   .container {
-    min-height: 95vh;
+    max-width: 1400px;
     padding: 0 25px;
     overflow: hidden;
   }
@@ -29,6 +31,27 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
+    .social-link {
+      align-self: flex-end;
+      justify-self: flex-end;
+      width: 50px;
+      height: 50px;
+      background-color: $nav-gray-1;
+      border-radius: 5px;
+      // opacity: 0.1;
+      .icon {
+        height: 25px;
+        background-size: contain;
+        position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../assets/icons/facebook-square.svg');
+        margin-top: 50%;
+        margin-left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.55;
+        border-radius: 2px;
+      }
+    }
   }
   .about-photo-1,
   .about-photo-2 {
@@ -67,19 +90,16 @@
     }
     .text-info-1 {
       grid-area: text1;
-      // .decoration-1 {
-      //   position: absolute;
-      //   top: 50%;
-      //   left: 50%;
-      //   width: 100px;
-      //   height: 100px;
-      //   background: url('../../assets/icons/innovation.svg') no-repeat center;
-      //   transform: translate(-50%,-50%);
-      //   opacity: 0.1;
-      // }
       .decoration-1 {
-        // opacity: 1;
-        top: 80%;
+        position: absolute;
+        content: '';
+        top: 50px;
+        left: 0;
+        width: 0px;
+        height: 0px;
+        border-top: 100px solid $graphite;
+        border-right: 100px solid transparent;
+        opacity: 0.1;
       }
       span {
         font-weight: 400;
@@ -97,19 +117,10 @@
     }
     .text-info-2 {
       grid-area: text2;
-      // .decoration-2 {
-      //   position: absolute;
-      //   top: 85%;
-      //   right: 10%;
-      //   width: 100px;
-      //   height: 100px;
-      //   background: url('../../assets/icons/measurement-tool.svg') no-repeat center;
-      //   transform: scaleX(-1) translate(-50%,-50%);
-      //   opacity: 0.1;
-      // }
-      .decoration-2 {
-        // opacity: 1;
-        top: 80%;
+      .social-link {
+      position: absolute;
+      bottom: 50px;
+      right: 30px;
       }
     }
     .about-photo-1, .about-photo-2 {
